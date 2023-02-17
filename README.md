@@ -23,6 +23,9 @@
     <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/STRINGLABITSOLUTIONS/portfolio">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/STRINGLABITSOLUTIONS/portfolio">
     <img alt="GitHub Discussions" src="https://img.shields.io/github/discussions/STRINGLABITSOLUTIONS/portfolio">
+    <a href="https://stringlabsolutions.vercel.app/">
+        <img alt="Live Link" src="https://img.shields.io/website?down_color=lightgrey&down_message=offline&up_color=blue&up_message=online&url=https%3A%2F%2Fstringlabsolutions.vercel.app"/>
+    </a>
 </div>
 <!-- repository summary badges end -->
 
