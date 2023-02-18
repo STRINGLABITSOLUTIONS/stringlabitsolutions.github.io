@@ -1,7 +1,7 @@
 import React from 'react'
+import logo from '../media/images/logo.png'
 
 export default function Footer() {
-    const logo = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqxfOK1hX7b0k8Nw34mqWf_vv-OdVSgz5ZxBfbgE1iGkWHjIcazMjKpklahIYzmmWwblU&usqp=CAU';
   return (
     <footer class="w-full bg-gray-100 dark:bg-gray-900 py-16">
         <div class="md:px-12 lg:px-28">
