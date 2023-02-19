@@ -13,7 +13,6 @@ export default function hero() {
             <NavBar/>
         </header>
         <div className="relative">
-            
             <img className="absolute inset-0 w-screen h-screen object-cover object-top" src={bg} width="400" height="500" alt="hero background image"/>
             <div aria-hidden="true" className="absolute inset-0 w-screen h-screen bg-purple-900 bg-opacity-30 backdrop-blur-lg"></div>
             <div className="relative container m-auto px-6 md:px-12 lg:px-6">

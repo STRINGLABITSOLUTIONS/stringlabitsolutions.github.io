@@ -2,11 +2,49 @@ import React from 'react'
 
 export default function NavBar() {
     const logo = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqxfOK1hX7b0k8Nw34mqWf_vv-OdVSgz5ZxBfbgE1iGkWHjIcazMjKpklahIYzmmWwblU&usqp=CAU';
-  return (
+    const menuItem = [
+        {
+          id: 1,
+          name: "Home",
+          icon: "",
+          link: "/",
+        },
+        {
+          id: 2,
+          name: "Product",
+          icon: "",
+          link: "/",
+        },
+        {
+          id: 3,
+          name: "Pricing",
+          icon: "",
+          link: "/",
+        },
+        {
+          id: 4,
+          name: "Blog",
+          icon: "",
+          link: "/about",
+        },
+        {
+          id: 5,
+          name: "About",
+          icon: "",
+          link: "/about",
+        },
+        {
+          id: 6,
+          name: "Contact",
+          icon: "",
+          link: "/about",
+        }
+      ];
+    return (
     <nav id="header_" className="fixed top-0 left-0 z-20 w-full transition-all ease-in">
         <div className="container m-auto px-6 md:px-12 lg:px-6">
             <div className="flex flex-wrap items-center justify-between py-6 md:py-4 md:gap-0">
-                <div className="w-full flex items-center justify-between lg:w-auto">
+                <div className="w-screen flex items-center justify-between lg:w-auto">
                     <a href="#" aria-label="logo">
                         <img src={logo} className="w-12 h-12 rounded-full" alt="tailus logo" width="144" height="48"/>
                     </a>
@@ -19,34 +57,16 @@ export default function NavBar() {
                     </div>
                 </div>
 
-                <div id="navbar" className="flex h-0 lg:h-auto overflow-hidden lg:flex lg:pt-0 w-full md:space-y-0 lh:p-0 md:bg-transparent lg:w-auto transition-all duration-300">
+                <div id="navbar" className="rounded-xl flex h-0 lg:h-auto overflow-hidden lg:flex lg:pt-0 w-full md:space-y-0 lh:p-0 md:bg-transparent lg:w-auto transition-all duration-300">
                     <div id="navBox" className="w-full p-6 lg:p-0 bg-white bg-opacity-40 backdrop-blur-md lg:items-center flex flex-col lg:flex-row lg:bg-transparent transition-all ease-in">
                         <ul className="space-y-6 pb-6 tracking-wide font-medium text-gray-800 lg:text-gray-100 lg:pb-0 lg:pr-6 lg:items-center lg:flex lg:space-y-0">
-                            <li>
-                                <a href="#" className="block md:px-3">
-                                    <span>Product</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="block md:px-3">
-                                    <span>Use Cases</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="block md:px-3">
-                                    <span>Integrations</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="block md:px-3">
-                                    <span>Pricing</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="block md:px-3">
-                                    <span>Blog</span>
-                                </a>
-                            </li>
+                            {menuItem.map((menu) => (
+                                <li key={menu.id} className="hover:scale-105 hover:border-b-2">
+                                    <a href={menu.link} className="block md:px-3">
+                                        <span>{menu.name}</span>
+                                    </a>
+                                </li>
+                            ))}
                         </ul>
                         <ul className="border-t w-full lg:w-max gap-3 pt-2 lg:pt-0 lg:pl-2 lg:border-t-0 lg:border-l flex flex-col lg:gap-0 lg:items-center lg:flex-row">
                             <li className="flex w-full lg:max-w-max justify-center">
