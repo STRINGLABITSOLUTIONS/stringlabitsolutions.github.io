@@ -2,8 +2,46 @@ import React from 'react'
 import logo from '../media/images/logo.png'
 
 export default function NavBar() {
-    const logo = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqxfOK1hX7b0k8Nw34mqWf_vv-OdVSgz5ZxBfbgE1iGkWHjIcazMjKpklahIYzmmWwblU&usqp=CAU';
-  return (
+    //const logo = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqxfOK1hX7b0k8Nw34mqWf_vv-OdVSgz5ZxBfbgE1iGkWHjIcazMjKpklahIYzmmWwblU&usqp=CAU';
+    const menuItem = [
+        {
+            id: 1,
+            name: "Home",
+            icon: "",
+            link: "/",
+          },
+          {
+            id: 2,
+            name: "Product",
+            icon: "",
+            link: "/",
+          },
+          {
+            id: 3,
+            name: "Pricing",
+            icon: "",
+            link: "/",
+          },
+          {
+            id: 4,
+            name: "Blog",
+            icon: "",
+            link: "/",
+          },
+          {
+            id: 5,
+            name: "About",
+            icon: "",
+            link: "/",
+          },
+          {
+            id: 6,
+            name: "Contact",
+            icon: "",
+            link: "/",
+          },
+    ]
+    return (
     <nav id="header_" className="fixed top-0 left-0 z-20 w-full transition-all ease-in">
         <div className="container m-auto px-6 md:px-12 lg:px-6">
             <div className="flex flex-wrap items-center justify-between py-6 md:py-4 md:gap-0">
@@ -34,7 +72,7 @@ export default function NavBar() {
                         <ul className="border-t w-full lg:w-max gap-3 pt-2 lg:pt-0 lg:pl-2 lg:border-t-0 lg:border-l flex flex-col lg:gap-0 lg:items-center lg:flex-row">
                             <li className="flex w-full lg:max-w-max justify-center">
                                 <button type="button" title="Start buying" className="flex w-full py-3 px-6 rounded-md text-center transition border border-purple-600 bg-white bg-opacity-40 backdrop-blur-md lg:backdrop-blur-none lg:bg-opacity-0 lg:bg-transparent lg:border-transparent active:border-purple-400 justify-center max-w-lg lg:max-w-max">
-                                    <span className="block text-gray-700 lg:text-white font-semibold">
+                                    <span className="block text-gray-700 lg:text-white font-semibold hover:text-purple-400">
                                         Login
                                     </span>
                                 </button>
