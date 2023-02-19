@@ -59,7 +59,7 @@ export default function NavBar() {
                             <li className="flex w-full lg:max-w-max justify-center">
                                 <button type="button" title="Start buying" className="flex w-full py-3  px-6 rounded-lg text-center transition bg-purple-600 lg:bg-white active:bg-purple-700 lg:active:bg-purple-200 focus:bg-purple-500 lg:focus:bg-purple-100 justify-center max-w-lg lg:max-w-max">
                                     <span className="block text-sm text-white lg:text-purple-600 font-semibold">
-                                        Sign In
+                                        Sign Up
                                     </span>
                                 </button>
                             </li>
