@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 import logo from '../media/images/logo.png'
 
 export default function NavBar() {
-    //const logo = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqxfOK1hX7b0k8Nw34mqWf_vv-OdVSgz5ZxBfbgE1iGkWHjIcazMjKpklahIYzmmWwblU&usqp=CAU';
+    const [isOpen, setIsOpen] = useState(false);
+    const hamburgerLine = `h-1 w-6 my-1 rounded-full bg-white transition ease transform duration-300`;
     const menuItem = [
         {
             id: 1,
@@ -51,9 +52,25 @@ export default function NavBar() {
                     </a>
 
                     <div className="block max-w-max">
-                        <button aria-label="humburger" id="hamburger" className="block relative h-auto lg:hidden">
-                            <div aria-hidden="true" id="line" className="m-auto h-0.5 w-6 rounded bg-gray-100 transition duration-300"></div>
-                            <div aria-hidden="true" id="line2" className="m-auto mt-2 h-0.5 w-6 rounded bg-gray-100 transition duration-300"></div>
+                        {/* Hamburger button start */}
+                        <button
+                            className="lg:hidden flex flex-col h-6 w-12 justify-center items-center group"
+                            onClick={() => setIsOpen(!isOpen)}
+                        >
+                            <div
+                            className={`${hamburgerLine} ${
+                                isOpen
+                                ? "rotate-45 translate-y-1.5 opacity-50 group-hover:opacity-100"
+                                : "opacity-50 group-hover:opacity-100"
+                            }`}
+                            />
+                            <div
+                            className={`${hamburgerLine} ${
+                                isOpen
+                                ? "-rotate-45 -translate-y-1.5 opacity-50 group-hover:opacity-100"
+                                : "opacity-50 group-hover:opacity-100"
+                            }`}
+                            />
                         </button>
                     </div>
                 </div>
