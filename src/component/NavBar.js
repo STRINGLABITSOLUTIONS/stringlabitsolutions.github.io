@@ -1,46 +1,9 @@
 import React from 'react'
+import logo from '../media/images/logo.png'
 
 export default function NavBar() {
     const logo = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqxfOK1hX7b0k8Nw34mqWf_vv-OdVSgz5ZxBfbgE1iGkWHjIcazMjKpklahIYzmmWwblU&usqp=CAU';
-    const menuItem = [
-        {
-          id: 1,
-          name: "Home",
-          icon: "",
-          link: "/",
-        },
-        {
-          id: 2,
-          name: "Product",
-          icon: "",
-          link: "/",
-        },
-        {
-          id: 3,
-          name: "Pricing",
-          icon: "",
-          link: "/",
-        },
-        {
-          id: 4,
-          name: "Blog",
-          icon: "",
-          link: "/about",
-        },
-        {
-          id: 5,
-          name: "About",
-          icon: "",
-          link: "/about",
-        },
-        {
-          id: 6,
-          name: "Contact",
-          icon: "",
-          link: "/about",
-        }
-      ];
-    return (
+  return (
     <nav id="header_" className="fixed top-0 left-0 z-20 w-full transition-all ease-in">
         <div className="container m-auto px-6 md:px-12 lg:px-6">
             <div className="flex flex-wrap items-center justify-between py-6 md:py-4 md:gap-0">
