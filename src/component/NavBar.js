@@ -52,7 +52,7 @@ export default function NavBar() {
                     </a>
 
                     <div className="block max-w-max">
-                        {/* Hamburger button start */}
+                        {/* Hamburger button */}
                         <button
                             className="lg:hidden flex flex-col h-6 w-12 justify-center items-center group"
                             onClick={() => setIsOpen(!isOpen)}
@@ -75,7 +75,7 @@ export default function NavBar() {
                     </div>
                 </div>
 
-                <div id="navbar" className="rounded-xl flex h-0 lg:h-auto overflow-hidden lg:flex lg:pt-0 w-full md:space-y-0 lh:p-0 md:bg-transparent lg:w-auto transition-all duration-300">
+                <div id="navbar" className="rounded-xl flex h-0 lg:h-auto overflow-hidden lg:flex lg:pt-0 w-full md:space-y-0 lg:p-0 md:bg-transparent lg:w-auto transition-all duration-300">
                     <div id="navBox" className="w-full p-6 lg:p-0 bg-white bg-opacity-40 backdrop-blur-md lg:items-center flex flex-col lg:flex-row lg:bg-transparent transition-all ease-in">
                         <ul className="space-y-6 pb-6 tracking-wide font-medium text-gray-800 lg:text-gray-100 lg:pb-0 lg:pr-6 lg:items-center lg:flex lg:space-y-0">
                             {menuItem.map((menu) => (
