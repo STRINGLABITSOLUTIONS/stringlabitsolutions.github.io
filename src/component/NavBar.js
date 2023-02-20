@@ -42,7 +42,7 @@ export default function NavBar() {
             icon: "",
             link: "/",
           },
-    ]
+    ];
     return (
     <nav id="header_" className="fixed top-0 left-0 z-20 w-full transition-all ease-in">
         <div className="container m-auto px-6 md:px-12 lg:px-6">
