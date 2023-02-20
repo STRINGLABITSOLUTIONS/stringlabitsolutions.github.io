@@ -1,4 +1,4 @@
-import NavBar from './NavBar'
+import React from "react";
 
 export default function hero() {
     const bg = 'https://officesnapshots.com/wp-content/uploads/2012/06/cheil06-700x344.jpg';
@@ -9,9 +9,6 @@ export default function hero() {
     const icon5 = 'https://tailus.io/sources/blocks/job-board/preview/images/clients/grabyo.png';
   return (
     <div className='h-screen overflow-hidden'>
-        <header className='w-screen'>
-            <NavBar/>
-        </header>
         <div className="relative">
             <img className="absolute inset-0 w-screen h-screen object-cover object-top" src={bg} width="400" height="500" alt="hero background image"/>
             <div aria-hidden="true" className="absolute inset-0 w-screen h-screen bg-purple-900 bg-opacity-30 backdrop-blur-lg"></div>

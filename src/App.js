@@ -1,20 +1,18 @@
-import Hero from "./component/Hero";
-import Service from "./component/Service";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./component/Footer";
-import Team from "./component/Team";
-import Pricing from "./component/Pricing";
-import LogoCloud from "./component/LogoCloud";
-import Contact from "./component/Contact";
+import NavBar from "./component/NavBar";
+import Home from "./pages/Home";
 function App() {
   return (
     <div className="bg-white dark:bg-gray-900">
-      <Hero/>
-      <Service/>
-      <Team/>
-      <Pricing/>
-      <LogoCloud/>
-      <Contact/>
-      <Footer/>
+      <BrowserRouter>
+        <NavBar/>
+        <Routes>
+          <Route index element={<Home/>}/>
+          <Route path="*" element={<div className="text-2xl h-screen">404 Not Found</div>} />
+        </Routes>
+        <Footer/>
+      </BrowserRouter>
     </div>
   );
 }

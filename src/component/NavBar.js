@@ -47,7 +47,7 @@ export default function NavBar() {
         <div className="container m-auto px-6 md:px-12 lg:px-6">
             <div className="flex flex-wrap items-center justify-between py-6 md:py-4 md:gap-0">
                 <div className="w-screen flex items-center justify-between lg:w-auto">
-                    <a href="#" aria-label="logo">
+                    <a href={'/'} aria-label="logo">
                         <img src={logo} className="w-12 h-12 rounded-full" alt="tailus logo" width="144" height="48"/>
                     </a>
 
