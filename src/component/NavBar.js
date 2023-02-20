@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { NavLink } from 'react-router-dom';
 import logo from '../media/images/logo.png'
 
 export default function NavBar() {
@@ -47,25 +48,19 @@ export default function NavBar() {
         <div className="container m-auto px-6 md:px-12 lg:px-6">
             <div className="flex flex-wrap items-center justify-between py-6 md:py-4 md:gap-0">
                 <div className="w-screen flex items-center justify-between lg:w-auto">
-                    <a href={'/'} aria-label="logo">
+                    <NavLink to={'/'} aria-label="logo">
                         <img src={logo} className="w-12 h-12 rounded-full" alt="tailus logo" width="144" height="48"/>
-                    </a>
-
+                    </NavLink>
                     <div className="block max-w-max">
                         {/* Hamburger button */}
-                        <button
-                            className="lg:hidden flex flex-col h-6 w-12 justify-center items-center group"
-                            onClick={() => setIsOpen(!isOpen)}
-                        >
-                            <div
-                            className={`${hamburgerLine} ${
+                        <button id="hamburger" className="lg:hidden flex flex-col h-6 w-12 justify-center items-center group" onClick={() => setIsOpen(!isOpen)} >
+                            <div className={`${hamburgerLine} ${
                                 isOpen
                                 ? "rotate-45 translate-y-1.5 opacity-50 group-hover:opacity-100"
                                 : "opacity-50 group-hover:opacity-100"
                             }`}
                             />
-                            <div
-                            className={`${hamburgerLine} ${
+                            <div className={`${hamburgerLine} ${
                                 isOpen
                                 ? "-rotate-45 -translate-y-1.5 opacity-50 group-hover:opacity-100"
                                 : "opacity-50 group-hover:opacity-100"
@@ -75,14 +70,14 @@ export default function NavBar() {
                     </div>
                 </div>
 
-                <div id="navbar" className="rounded-xl flex h-0 lg:h-auto overflow-hidden lg:flex lg:pt-0 w-full md:space-y-0 lg:p-0 md:bg-transparent lg:w-auto transition-all duration-300">
+                <div id="navbar" className={`rounded-xl flex ${isOpen ? "h-full mt-2" : "h-0"} lg:h-auto overflow-hidden lg:flex lg:pt-0 w-full md:space-y-0 lg:p-0 md:bg-transparent lg:w-auto transition-all duration-200`}>
                     <div id="navBox" className="w-full p-6 lg:p-0 bg-white bg-opacity-40 backdrop-blur-md lg:items-center flex flex-col lg:flex-row lg:bg-transparent transition-all ease-in">
                         <ul className="space-y-6 pb-6 tracking-wide font-medium text-gray-800 lg:text-gray-100 lg:pb-0 lg:pr-6 lg:items-center lg:flex lg:space-y-0">
                             {menuItem.map((menu) => (
                                 <li key={menu.id} className="hover:scale-105 hover:border-b-2">
-                                    <a href={menu.link} className="block md:px-3">
+                                    <NavLink to={menu.link} className="block md:px-3">
                                         <span>{menu.name}</span>
-                                    </a>
+                                    </NavLink>
                                 </li>
                             ))}
                         </ul>
