@@ -21,8 +21,13 @@ export default function Product() {
         }
     ];
   return (
-    <div id='product' class="py-16">
+    <div class="py-16">
     <div class="xl:container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+      <div class="m-auto text-center lg:w-8/12 xl:w-7/12 mt-10 mb-10">
+          <h2 class="text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
+            Our top ranked products.
+          </h2>
+      </div>
       <div class="grid gap-12 md:gap-6 md:grid-cols-2 lg:gap-12">
         {productInfo.map( (p) => (
             <div class="group space-y-6" key={p.id}>
