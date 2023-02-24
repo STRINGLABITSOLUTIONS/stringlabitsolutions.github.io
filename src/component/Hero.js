@@ -8,7 +8,7 @@ export default function hero() {
     const icon4 = 'https://tailus.io/sources/blocks/job-board/preview/images/clients/lilly.png';
     const icon5 = 'https://tailus.io/sources/blocks/job-board/preview/images/clients/grabyo.png';
   return (
-    <div className='h-screen overflow-hidden'>
+    <div id="home" className='h-screen overflow-hidden'>
         <div className="relative">
             <img className="absolute inset-0 w-screen h-screen object-cover object-top" src={bg} width="400" height="500" alt="hero background image"/>
             <div aria-hidden="true" className="absolute inset-0 w-screen h-screen bg-purple-900 bg-opacity-30 backdrop-blur-lg"></div>
