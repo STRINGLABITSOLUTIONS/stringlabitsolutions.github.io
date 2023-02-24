@@ -4,7 +4,7 @@ export default function Pricing() {
     const icon1 = 'https://tailus.io/sources/blocks/team/preview/images/tanzanite.webp';
     const icon2 = 'https://tailus.io/sources/blocks/team/preview/images/premium.webp';
   return (
-    <div class="xl:container m-auto px-6 py-20 md:px-12 lg:px-20">
+    <div id='pricing' class="xl:container m-auto px-6 py-20 md:px-12 lg:px-20">
         <div class="m-auto text-center lg:w-8/12 xl:w-7/12">
             <h2 class="text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
             A Tailus Blocks subscription gives you access to our components and more.

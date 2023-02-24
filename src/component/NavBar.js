@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import logo from '../media/images/logo.png'
 
 export default function NavBar() {
@@ -22,7 +23,7 @@ export default function NavBar() {
             id: 3,
             name: "Pricing",
             icon: "",
-            link: "/",
+            link: "pricing", 
           },
           {
             id: 4,
@@ -75,9 +76,9 @@ export default function NavBar() {
                         <ul className="space-y-6 pb-6 tracking-wide font-medium text-gray-800 lg:text-gray-100 lg:pb-0 lg:pr-6 lg:items-center lg:flex lg:space-y-0">
                             {menuItem.map((menu) => (
                                 <li key={menu.id} className="hover:scale-105 hover:border-b-2">
-                                    <NavLink to={menu.link} className="block md:px-3">
+                                    <Link to={menu.link} smooth={true} spy={true} offset={50} duration={500} className="block md:px-3">
                                         <span>{menu.name}</span>
-                                    </NavLink>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
