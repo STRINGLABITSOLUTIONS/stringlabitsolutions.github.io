@@ -2,8 +2,7 @@ import React from 'react'
 
 export default function Product() {
   return (
-    
-    <div class="py-16">
+    <div id='product' class="py-16">
     <div class="xl:container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
       <div class="grid gap-12 md:gap-6 md:grid-cols-2 lg:gap-12">
         <div class="group space-y-6">

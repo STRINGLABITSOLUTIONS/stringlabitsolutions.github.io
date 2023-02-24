@@ -5,7 +5,7 @@ export default function Team() {
     const image2 = 'https://tailus.io/sources/blocks/bio-link/preview/images/woman.jpg';
     const image3 = 'https://tailus.io/sources/blocks/bio-link/preview/images/man.jpg';
   return (
-    <div class="py-20">
+    <div id='about' class="py-20">
         <div class="container mx-auto px-6 text-center md:px-12">
             <div class="mb-16">
             <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
