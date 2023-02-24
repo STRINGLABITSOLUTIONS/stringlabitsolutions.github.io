@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import logo from '../media/images/logo.png'
 
 export default function NavBar() {
@@ -10,19 +11,19 @@ export default function NavBar() {
             id: 1,
             name: "Home",
             icon: "",
-            link: "/",
+            link: "home",
           },
           {
             id: 2,
             name: "Product",
             icon: "",
-            link: "/",
+            link: "product",
           },
           {
             id: 3,
             name: "Pricing",
             icon: "",
-            link: "/",
+            link: "pricing", 
           },
           {
             id: 4,
@@ -34,13 +35,13 @@ export default function NavBar() {
             id: 5,
             name: "About",
             icon: "",
-            link: "/",
+            link: "about",
           },
           {
             id: 6,
             name: "Contact",
             icon: "",
-            link: "/",
+            link: "contact",
           },
     ];
     return (
@@ -74,10 +75,10 @@ export default function NavBar() {
                     <div id="navBox" className="w-full p-6 lg:p-0 bg-white bg-opacity-40 backdrop-blur-md lg:items-center flex flex-col lg:flex-row lg:bg-transparent transition-all ease-in">
                         <ul className="space-y-6 pb-6 tracking-wide font-medium text-gray-800 lg:text-gray-100 lg:pb-0 lg:pr-6 lg:items-center lg:flex lg:space-y-0">
                             {menuItem.map((menu) => (
-                                <li key={menu.id} className="hover:scale-105 hover:border-b-2">
-                                    <NavLink to={menu.link} className="block md:px-3">
+                                <li key={menu.id} className="cursor-pointer hover:scale-105 lg:hover:border-b-2">
+                                    <Link to={menu.link} smooth={true} duration={300} className="block md:px-3" onClick={() => setIsOpen(!isOpen)}>
                                         <span>{menu.name}</span>
-                                    </NavLink>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>

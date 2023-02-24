@@ -3,7 +3,7 @@ import React from 'react'
 export default function Contact() {
   return (
     
-    <body class="min-h-fit flex flex-col justify-center bg-white dark:bg-gray-900">
+    <body id='contact' class="min-h-fit flex flex-col justify-center bg-white dark:bg-gray-900">
     <div class="relative sm:py-16">
       <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 transition duration-300 delay-0">
         <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
