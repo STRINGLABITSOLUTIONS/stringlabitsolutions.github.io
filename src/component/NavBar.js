@@ -75,7 +75,7 @@ export default function NavBar() {
                     <div id="navBox" className="w-full p-6 lg:p-0 bg-white bg-opacity-40 backdrop-blur-md lg:items-center flex flex-col lg:flex-row lg:bg-transparent transition-all ease-in">
                         <ul className="space-y-6 pb-6 tracking-wide font-medium text-gray-800 lg:text-gray-100 lg:pb-0 lg:pr-6 lg:items-center lg:flex lg:space-y-0">
                             {menuItem.map((menu) => (
-                                <li key={menu.id} className="cursor-pointer hover:scale-105 hover:border-b-2">
+                                <li key={menu.id} className="cursor-pointer hover:scale-105 lg:hover:border-b-2">
                                     <Link to={menu.link} smooth={true} duration={300} className="block md:px-3" onClick={() => setIsOpen(!isOpen)}>
                                         <span>{menu.name}</span>
                                     </Link>
