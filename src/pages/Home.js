@@ -5,10 +5,13 @@ import Pricing from "../component/Pricing";
 import LogoCloud from "../component/LogoCloud";
 import Contact from "../component/Contact";
 import Product from "../component/Product";
+import Footer from "../component/Footer";
+import NavBar from "../component/NavBar";
 
 export default function Home() {
   return (
     <div className="bg-white dark:bg-gray-900">
+      <NavBar/>
       <Hero/>
       <Service/>
       <Product/>
@@ -16,6 +19,7 @@ export default function Home() {
       <Team/>
       <LogoCloud/>
       <Contact/>
+      <Footer/>
     </div>
   )
 }
