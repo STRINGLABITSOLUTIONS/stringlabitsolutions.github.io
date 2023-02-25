@@ -84,11 +84,13 @@ export default function NavBar() {
                         </ul>
                         <ul className="border-t w-full lg:w-max gap-3 pt-2 lg:pt-0 lg:pl-2 lg:border-t-0 lg:border-l flex flex-col lg:gap-0 lg:items-center lg:flex-row">
                             <li className="flex w-full lg:max-w-max justify-center">
-                                <button type="button" title="Start buying" className="flex w-full py-3 px-6 rounded-md text-center transition border border-purple-600 bg-white bg-opacity-40 backdrop-blur-md lg:backdrop-blur-none lg:bg-opacity-0 lg:bg-transparent lg:border-transparent active:border-purple-400 justify-center max-w-lg lg:max-w-max">
-                                    <span className="block text-gray-700 lg:text-white font-semibold hover:text-purple-400">
-                                        Login
-                                    </span>
-                                </button>
+                                <NavLink to={'/login'}>
+                                    <button type="button" title="Start buying" className="flex w-full py-3 px-6 rounded-md text-center transition border border-purple-600 bg-white bg-opacity-40 backdrop-blur-md lg:backdrop-blur-none lg:bg-opacity-0 lg:bg-transparent lg:border-transparent active:border-purple-400 justify-center max-w-lg lg:max-w-max">
+                                        <span className="block text-gray-700 lg:text-white font-semibold hover:text-purple-400">
+                                            Login
+                                        </span>
+                                    </button>
+                                </NavLink>
                             </li>
                             <li className="flex w-full lg:max-w-max justify-center">
                                 <button type="button" title="Start buying" className="flex w-full py-3  px-6 rounded-lg text-center transition bg-purple-600 lg:bg-white active:bg-purple-700 lg:active:bg-purple-200 focus:bg-purple-500 lg:focus:bg-purple-100 justify-center max-w-lg lg:max-w-max">
