@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Dashboard from "./pages/admin/Dashboard";
+import AdminPanel from "./pages/admin/AdminPanel";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 function App() {
@@ -12,7 +12,7 @@ function App() {
             <Route path="login" element={<Login/>}/>
           </Route>
           <Route path="/admin">
-            <Route index element={<Dashboard/>}/>
+            <Route index element={<AdminPanel/>}/>
             <Route path="login" element={<Login/>}/>
           </Route>
           <Route path="*" element={<div className="text-2xl h-screen">404 Not Found</div>} />
