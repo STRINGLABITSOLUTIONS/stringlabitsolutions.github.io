@@ -8,6 +8,45 @@ export default function AdminPanel () {
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
+  const menuItem = [
+    {
+      id: 1,
+      title: 'Dashboard',
+      icon: ''
+    },
+    {
+      id: 2,
+      title: 'Report',
+      icon: ''
+    }
+  ];
+  const settingMenuItem = [
+    {
+      id: 1,
+      title: 'Products',
+      icon: ''
+    },
+    {
+      id: 2,
+      title: 'Pricing',
+      icon: ''
+    },
+    {
+      id: 3,
+      title: 'Blogs',
+      icon: ''
+    },
+    {
+      id: 4,
+      title: 'Logos',
+      icon: ''
+    },
+    {
+      id: 5,
+      title: 'About',
+      icon: ''
+    }
+  ];
   return (
     <div className="flex h-screen">
       <div className="bg-gray-800 text-gray-100 flex flex-col justify-between w-64">
@@ -17,24 +56,21 @@ export default function AdminPanel () {
           </div>
           <nav className="flex-grow">
             <ul className="flex flex-col py-4">
-              <li
-                className={`${
-                  activeTab === 'dashboard' ? 'bg-gray-900 text-white' : 'text-gray-400 hover:text-white hover:bg-slate-700'
-                } pl-6 pr-4 py-2 cursor-pointer`}
-                onClick={() => handleTabClick('dashboard')}
-              >
-                <i className="fa fa-tachometer mr-3"></i>
-                Dashboard
-              </li>
-              <li
-                className={`${
-                  activeTab === 'reports' ? 'bg-gray-900 text-white' : 'text-gray-400 hover:text-white hover:bg-slate-700'
-                } pl-6 pr-4 py-2 cursor-pointer`}
-                onClick={() => handleTabClick('reports')}
-              >
-                <i className="fa fa-file-text-o mr-3"></i>
-                Reports
-              </li>
+              {/* menu start */}
+              {menuItem.map((item)=>(
+                <li
+                  key={item.id}
+                  className={`${
+                    activeTab === item.title ? 'bg-gray-900 text-white' : 'text-gray-400 hover:text-white hover:bg-slate-700'
+                  } pl-6 pr-4 py-2 cursor-pointer`}
+                  onClick={() => handleTabClick(item.title)}
+                >
+                  <i className="fa fa-tachometer mr-3"></i>
+                  {item.title}
+                </li>
+              ))}
+              {/* menuItem end */}
+              {/* settingMenuItem start */}
               <li
                 className={`pl-6 pr-4 py-2 cursor-pointer text-gray-400 hover:text-white hover:bg-slate-700`}
                 onClick={() => {setSettingsExpanded(!settingsExpanded);}}
@@ -46,24 +82,20 @@ export default function AdminPanel () {
                     settingsExpanded ? 'block' : 'hidden'
                   } ml-4 mt-2 transition-all duration-500 ease-in-out`}
                 >
-                  <li
-                    className={`${
-                      activeTab === 'general' ? 'bg-gray-900 text-white' : 'text-gray-400 hover:text-white hover:bg-slate-700'
-                    } pl-2 pr-4 py-2 cursor-pointer`}
-                    onClick={() => handleTabClick('general')}
-                  >
-                    ↳ General
-                  </li>
-                  <li
-                    className={`${
-                      activeTab === 'security' ? 'bg-gray-900 text-white' : 'text-gray-400 hover:text-white hover:bg-slate-700'
-                    } pl-2 pr-4 py-2 cursor-pointer`}
-                    onClick={() => handleTabClick('security')}
-                  >
-                    ↳ Security
-                  </li>
+                  {settingMenuItem.map((sItem)=>(
+                    <li
+                    key={sItem.id}
+                      className={`${
+                        activeTab === sItem.title ? 'bg-gray-900 text-white' : 'text-gray-400 hover:text-white hover:bg-slate-700'
+                      } pl-2 pr-4 py-2 cursor-pointer`}
+                      onClick={() => handleTabClick(sItem.title)}
+                    >
+                      ↳ {sItem.title}
+                    </li>
+                  ))}
                 </ul>
               </li>
+              {/* settingMenuItem end */}
             </ul>
           </nav>
         </div>
@@ -75,10 +107,13 @@ export default function AdminPanel () {
       </div>
       <div className="flex-1 bg-gray-100">
         <div className="p-6">
-          {activeTab === 'dashboard' && <Dashboard/>}
-          {activeTab === 'reports' && <h2>Reports</h2>}
-          {activeTab === 'general' && <h2>General Settings</h2>}
-          {activeTab === 'security' && <h2>Security Settings</h2>}
+          {activeTab === 'Dashboard' && <Dashboard/>}
+          {activeTab === 'Report' && <h2>Reports</h2>}
+          {activeTab === 'Products' && <h2>Products Settings</h2>}
+          {activeTab === 'Pricing' && <h2>Pricing Settings</h2>}
+          {activeTab === 'Blogs' && <h2>Blogs Settings</h2>}
+          {activeTab === 'Logos' && <h2>Logos Settings</h2>}
+          {activeTab === 'About' && <h2>Pricing Settings</h2>}
         </div>
       </div>
     </div>
