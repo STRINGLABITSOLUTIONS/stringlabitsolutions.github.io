@@ -32,6 +32,14 @@
 <br>
 <br>
 
+<h3>About This Project</h3>
+<p>
+    Welcome to the STRINGLABITSOLUTIONS portfolio repository on GitHub. This portfolio is a showcase of our background, skills, and accomplishments. We aim to represent our abilities and get recognized.
+</p>
+
+<br>
+<br>
+
 <div align="center">
     <a href="https://github.com/STRINGLABITSOLUTIONS/portfolio">
         <img width="396" src="https://github-readme-stats-mu-jet.vercel.app/api/pin/?username=STRINGLABITSOLUTIONS&repo=portfolio&theme=react&bg_color=0D1117&border_color=61dafb&hide_border=false" alt="repository badge" />
