@@ -100,7 +100,7 @@ export default function AdminPanel () {
           </nav>
         </div>
         <div className="text-center py-4">
-          <NavLink to="#" className="text-gray-400 hover:text-white">
+          <NavLink to="/" className="text-gray-400 hover:text-white">
             Logout
           </NavLink>
         </div>
