@@ -1,9 +1,29 @@
 import React from 'react'
 
 export default function Service() {
-    const image1 = 'https://tailus.io/sources/blocks/illustrated/preview/images/icons/code.png';
-    const image2 = 'https://tailus.io/sources/blocks/illustrated/preview/images/icons/magic.png';
-    const image3 = 'https://tailus.io/sources/blocks/illustrated/preview/images/icons/graphic.webp';
+    const services = [
+      {
+        id: 1,
+        title: 'Website development',
+        image: 'https://tailus.io/sources/blocks/illustrated/preview/images/icons/code.png',
+        description: 'Our team of expert web developers is dedicated to crafting custom websites that are tailored to your unique needs and goals. We specialize in creating responsive, user-friendly sites that provide a seamless experience across all devices.',
+        link:'#'
+      },
+      {
+        id: 2,
+        title: 'Web-App development',
+        image: 'https://tailus.io/sources/blocks/illustrated/preview/images/icons/magic.png',
+        description: 'From e-commerce platforms to enterprise software solutions, we have the skills and expertise to create web applications that meet your unique needs. Contact us today to learn more about how we can help you take your business to the next level.',
+        link:'#'
+      },
+      {
+        id: 3,
+        title: 'UI/UX design',
+        image: 'https://tailus.io/sources/blocks/illustrated/preview/images/icons/graphic.webp',
+        description: 'Our expert UI/UX designers have years of experience designing intuitive, user-friendly interfaces that drive engagement and conversions. We work closely with our clients to understand their unique brand and business objectives.',
+        link:'#'
+      }
+    ]
   return (
     <div id='product' className="relative py-16">
       <div className="container relative m-auto px-6 text-gray-500 md:px-12">
@@ -13,64 +33,21 @@ export default function Service() {
             </h2>
         </div>
         <div className="grid gap-6 md:mx-auto md:w-8/12 lg:w-full lg:grid-cols-3">
-          <div className="group space-y-6 border border-gray-100 dark:border-gray-700 rounded-3xl bg-white dark:bg-gray-800 px-8 py-12 text-center shadow-2xl shadow-gray-600/10 dark:shadow-none">
-            <img
-              className="mx-auto w-24"
-              src={image1}
-              alt="illustration"
-              loading="lazy"
-            />
-            <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">Web development</h3>
-            <p>
-              Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur ullam
-              tempora ipsa iste officia sed officiis! Incidunt ea animi officiis.
-            </p>
-            <a
-              href="#"
-              className="relative mx-auto flex h-10 w-10 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-100 dark:before:border-gray-600 before:transition before:duration-300 group-hover:before:scale-125"
-            >
-              <span className="text-primary">→</span>
-            </a>
-          </div>
-          <div className="group space-y-6 border border-gray-100 dark:border-gray-700 rounded-3xl bg-white dark:bg-gray-800 px-8 py-12 text-center shadow-2xl shadow-gray-600/10 dark:shadow-none">
-            <img
-              className="mx-auto w-24"
-              src={image2}
-              alt="illustration"
-              loading="lazy"
-            />
-            <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">Seo</h3>
-            <p>
-              Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur ullam
-              tempora ipsa iste officia sed officiis! Incidunt ea animi officiis.
-            </p>
-
-            <a
-              href="#"
-              className="relative mx-auto flex h-10 w-10 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-100 dark:before:border-gray-600 before:transition before:duration-300 group-hover:before:scale-125"
-            >
-              <span className="text-primary">→</span>
-            </a>
-          </div>
-          <div className="group space-y-6 border border-gray-100 dark:border-gray-700 rounded-3xl bg-white dark:bg-gray-800 px-8 py-12 text-center shadow-2xl shadow-gray-600/10 dark:shadow-none">
-            <img
-              className="mx-auto w-24"
-              src={image3}
-              alt="illustration"
-              loading="lazy"
-            />
-            <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">Web Design</h3>
-            <p>
-              Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur ullam
-              tempora ipsa iste officia sed officiis! Incidunt ea animi officiis.
-            </p>
-            <a
-              href="#"
-              className="relative mx-auto flex h-10 w-10 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-100 dark:before:border-gray-600 before:transition before:duration-300 group-hover:before:scale-125"
-            >
-              <span className="text-primary">→</span>
-            </a>
-          </div>
+          {services.map((service)=>(
+            <div key={service.id} className="group space-y-6 border border-gray-100 dark:border-gray-700 rounded-3xl bg-white dark:bg-gray-800 px-8 py-12 text-center shadow-2xl shadow-gray-600/10 dark:shadow-none">
+              <img
+                className="mx-auto w-24"
+                src={service.image}
+                alt="illustration"
+                loading="lazy"
+              />
+              <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">{service.title}</h3>
+              <p>{service.description}</p>
+              <button className="relative mx-auto flex h-10 w-10 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-100 dark:before:border-gray-600 before:transition before:duration-300 group-hover:before:scale-125">
+                <span className="text-primary">→</span>
+              </button>
+            </div>
+          ))}
         </div>
       </div>
     </div>
