@@ -1,20 +1,22 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+import imageAbid from '../media/images/member/abid.jpg'
+import imagemontasim from '../media/images/member/montasim.jpg'
 
 export default function Team() {
     const persons = [
         {
             id: 1,
             name: 'Montasim Mamun',
-            designation: 'Chief Operations Officer',
-            image: 'https://tailus.io/sources/blocks/bio-link/preview/images/woman1.jpg',
+            designation: 'Co-Founder',
+            image: imagemontasim,
             bioLink: '#'
         },
         {
             id: 2,
             name: 'Abid Hasan',
-            designation: 'Chief Technical Officer',
-            image: 'https://tailus.io/sources/blocks/bio-link/preview/images/man.jpg',
+            designation: 'Co-Founder',
+            image: imageAbid,
             bioLink: '#'
         }
     ];
