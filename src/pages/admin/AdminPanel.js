@@ -8,10 +8,6 @@ export default function AdminPanel () {
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
-  const handleSettingsToggle = () => {
-    setSettingsExpanded(!settingsExpanded);
-  };
-
   return (
     <div className="flex h-screen">
       <div className="bg-gray-800 text-gray-100 flex flex-col justify-between w-64">
@@ -41,7 +37,7 @@ export default function AdminPanel () {
               </li>
               <li
                 className={`pl-6 pr-4 py-2 cursor-pointer text-gray-400 hover:text-white hover:bg-slate-700`}
-                onClick={handleSettingsToggle}
+                onClick={() => {setSettingsExpanded(!settingsExpanded);}}
               >
                 <i className={`fa fa-cog mr-3 ${settingsExpanded ? 'rotate-90' : ''}`}></i>
                 Settings
