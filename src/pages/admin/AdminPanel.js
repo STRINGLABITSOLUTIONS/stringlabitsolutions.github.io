@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import Dashboard from './component/Dashboard';
 
 export default function AdminPanel () {
-  const [activeTab, setActiveTab] = useState('dashboard');
+  const [activeTab, setActiveTab] = useState('Dashboard');
   const [settingsExpanded, setSettingsExpanded] = useState(false);
   const handleTabClick = (tab) => {
     setActiveTab(tab);
