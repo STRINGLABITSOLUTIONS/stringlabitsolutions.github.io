@@ -4,9 +4,14 @@ import Dashboard from './component/Dashboard';
 
 export default function AdminPanel () {
   const [activeTab, setActiveTab] = useState('Dashboard');
+  const [settingSelected, setSettingSelected] = useState(false);
   const [settingsExpanded, setSettingsExpanded] = useState(false);
   const handleTabClick = (tab) => {
     setActiveTab(tab);
+    if (tab !== 'Dashboard' && tab !== 'Report'){
+      setSettingSelected(true);
+    }
+    else setSettingSelected(false);
   };
   const menuItem = [
     {
@@ -56,7 +61,7 @@ export default function AdminPanel () {
           </div>
           <nav className="flex-grow">
             <ul className="flex flex-col py-4">
-              {/* menu start */}
+              {/* ========================menu start======================== */}
               {menuItem.map((item)=>(
                 <li
                   key={item.id}
@@ -69,33 +74,24 @@ export default function AdminPanel () {
                   {item.title}
                 </li>
               ))}
-              {/* menuItem end */}
-              {/* settingMenuItem start */}
-              <li
-                className={`pl-6 pr-4 py-2 cursor-pointer text-gray-400 hover:text-white hover:bg-slate-700`}
-                onClick={() => {setSettingsExpanded(!settingsExpanded);}}
-              >
+              {/* ========================menuItem end======================== */}
+              {/* ========================settingMenuItem start======================== */}
+              <li className={`${settingSelected?'bg-gray-900 text-white':'text-gray-400 hover:text-white hover:bg-slate-700'} pl-6 pr-4 py-2 cursor-pointer `} onClick={() => {setSettingsExpanded(!settingsExpanded);}}>
                 <i className={`fa fa-cog mr-3 ${settingsExpanded ? 'rotate-90' : ''}`}></i>
-                Settings
-                <ul
-                  className={`${
-                    settingsExpanded ? 'block' : 'hidden'
-                  } ml-4 mt-2 transition-all duration-500 ease-in-out`}
-                >
+                  Settings
+                <ul className={`${ settingsExpanded ? 'block' : 'hidden' } ml-4 mt-2 transition-all duration-500 ease-in-out`}>
                   {settingMenuItem.map((sItem)=>(
-                    <li
-                    key={sItem.id}
-                      className={`${
-                        activeTab === sItem.title ? 'bg-gray-900 text-white' : 'text-gray-400 hover:text-white hover:bg-slate-700'
+                    <li key={sItem.id} className={`${
+                      activeTab === sItem.title ? 'bg-gray-800 text-white' : 'text-gray-400 hover:text-white hover:bg-slate-700'
                       } pl-2 pr-4 py-2 cursor-pointer`}
-                      onClick={() => handleTabClick(sItem.title)}
+                      onClick={() => {handleTabClick(sItem.title)}}
                     >
                       ↳ {sItem.title}
                     </li>
                   ))}
                 </ul>
               </li>
-              {/* settingMenuItem end */}
+              {/* ========================settingMenuItem end======================== */}
             </ul>
           </nav>
         </div>
