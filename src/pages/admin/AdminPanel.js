@@ -101,7 +101,7 @@ export default function AdminPanel () {
           </NavLink>
         </div>
       </div>
-      <div className="flex-1 bg-gray-100">
+      <div className="flex-1 bg-gray-700 text-gray-50">
         <div className="p-6">
           {activeTab === 'Dashboard' && <Dashboard/>}
           {activeTab === 'Report' && <h2>Reports</h2>}
