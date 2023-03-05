@@ -21,31 +21,31 @@ export default function Product() {
         }
     ];
   return (
-    <div class="py-16">
-    <div class="xl:container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-      <div class="m-auto text-center lg:w-8/12 xl:w-7/12 mt-10 mb-10">
-          <h2 class="text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
+    <div className="py-16">
+    <div className="xl:container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+      <div className="m-auto text-center lg:w-8/12 xl:w-7/12 mt-10 mb-10">
+          <h2 className="text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
             Our top ranked products.
           </h2>
       </div>
-      <div class="grid gap-12 md:gap-6 md:grid-cols-2 lg:gap-12">
+      <div className="grid gap-12 md:gap-6 md:grid-cols-2 lg:gap-12">
         {productInfo.map( (p) => (
-            <div class="group space-y-6" key={p.id}>
+            <div className="group space-y-6" key={p.id}>
                 <img
                 src={p.bg}
                 alt="art cover"
                 loading="lazy"
                 width="1000"
                 height="667"
-                class="h-80 w-full rounded-3xl object-cover object-top transition-all duration-500 group-hover:rounded-xl"
+                className="h-80 w-full rounded-3xl object-cover object-top transition-all duration-500 group-hover:rounded-xl"
                 />
-                <h3 class="text-3xl font-semibold text-gray-800 dark:text-white">{p.title}</h3>
-                <p class="text-gray-600 dark:text-gray-300">{p.discription}</p>
-                <div class="flex gap-6 items-center">
-                <Link to={p.link} class="-ml-1 p-1 rounded-full flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800">
-                    <span class="block font-semibold text-base text-gray-600 dark:text-gray-200">View Demo.</span>
+                <h3 className="text-3xl font-semibold text-gray-800 dark:text-white">{p.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300">{p.discription}</p>
+                <div className="flex gap-6 items-center">
+                <Link to={p.link} className="-ml-1 p-1 rounded-full flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800">
+                    <span className="block font-semibold text-base text-gray-600 dark:text-gray-200">View Demo.</span>
                 </Link>
-                <span class="w-max block font-light text-gray-500 sm:mt-0">{p.date}</span>
+                <span className="w-max block font-light text-gray-500 sm:mt-0">{p.date}</span>
                 </div>
             </div>
         ))}
