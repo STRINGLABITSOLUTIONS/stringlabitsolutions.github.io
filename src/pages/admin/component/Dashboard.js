@@ -5,7 +5,7 @@ export default function Dashboard() {
   return (
     <div className='grid grid-cols-12 gap-2'>
       {/* --------Header-------- */}
-      <div className='text-center bg-gray-600 col-span-12 h-10'>
+      <div className='text-center bg-gray-600 col-span-12'>
         <Header/>
       </div>
       {/* --------Projects-------- */}
