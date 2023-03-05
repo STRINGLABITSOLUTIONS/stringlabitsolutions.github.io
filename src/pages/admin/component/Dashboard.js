@@ -1,16 +1,17 @@
 import React from 'react'
 import Header from './dashComponents/Header'
+import Products from './dashComponents/Products'
 
 export default function Dashboard() {
   return (
     <div className='grid grid-cols-12 gap-2'>
       {/* --------Header-------- */}
-      <div className='text-center bg-gray-600 col-span-12'>
+      <div className='col-span-12'>
         <Header/>
       </div>
-      {/* --------Projects-------- */}
-      <div className='text-center bg-gray-600 col-span-8'>
-        <div>Projects</div>
+      {/* --------Products-------- */}
+      <div className='col-span-8'>
+        <Products/>
       </div>
       {/* --------Testimonials-------- */}
       <div className='text-center bg-gray-600 col-span-4'>
