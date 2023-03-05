@@ -57,7 +57,7 @@ export default function AdminPanel () {
       <div className="bg-gray-800 text-gray-100 flex flex-col justify-between w-64">
         <div className="flex flex-col">
           <div className="flex items-center justify-center h-16">
-            <h1 className="text-2xl font-bold">Dashboard</h1>
+            <h1 className="text-2xl font-bold">String Lab</h1>
           </div>
           <nav className="flex-grow">
             <ul className="flex flex-col py-4">
@@ -99,6 +99,9 @@ export default function AdminPanel () {
           <NavLink to="/" className="text-gray-400 hover:text-white">
             Logout
           </NavLink>
+          <div className='border-t mt-5 pt-5 text-xs'>
+            All copyright © recieved 2023 <br /> String Lab Solution
+          </div>
         </div>
       </div>
       <div className="flex-1 bg-gray-700 text-gray-50">
