@@ -25,7 +25,7 @@ export default function Products() {
             onClick={() => setIsOpen(!isOpen)}
             aria-expanded={isOpen}
             aria-haspopup='true'>
-            Select options
+            Select Products
           </button>
           {isOpen && (
             <div className='absolute z-10 top-10 right-0 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5'>
