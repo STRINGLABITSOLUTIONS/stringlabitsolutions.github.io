@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
-import imageAbid from '../media/images/member/abid.jpg';
-import imagemontasim from '../media/images/member/montasim.jpg';
+import imageAbid from '../../media/images/member/abid.jpg';
+import imagemontasim from '../../media/images/member/montasim.jpg';
 
 export default function Team() {
   const teamMembers = [
