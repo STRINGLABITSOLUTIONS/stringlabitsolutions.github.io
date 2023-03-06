@@ -10,7 +10,7 @@ export default function Blogs() {
 
   error && <div>Error: {error.message}</div>;
 
-  (!data || !data.length) && <div>No data found</div>;
+  (!data || !data?.length) && <div>No data found</div>;
 
   function handleCheckboxChange(event) {
     const value = event.target.value;
@@ -57,11 +57,11 @@ export default function Blogs() {
       </div>
       <div className='p-2'>
         {data
-          ?.filter((data) => selectedItems.includes(data.value))
+          ?.filter((data) => selectedItems.includes(data?.value))
           .map((data) => (
-            <div key={data.id} className='bg-gray-500 mt-3 p-2 rounded-lg'>
-              <h1>{data.title}</h1>
-              <p>{data.author}</p>
+            <div key={data?.id} className='bg-gray-500 mt-3 p-2 rounded-lg'>
+              <h1>{data?.title}</h1>
+              <p>{data?.author}</p>
             </div>
           ))}
       </div>
