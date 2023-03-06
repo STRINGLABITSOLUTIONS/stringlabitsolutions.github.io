@@ -19,7 +19,7 @@ export default function Blogs() {
   return (
     <div>
         <div className='flex items-center justify-between'>
-            <h1>Blogs</h1>
+            <h1>Blog</h1>
             <div className="relative inline-block">
                 <button className="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
                     onClick={()=>setIsOpen(!isOpen)}
