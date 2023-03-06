@@ -3,11 +3,7 @@ import React, { useState } from 'react';
 export default function Products() {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedValues, setSelectedValues] = useState([]);
-  
-    const handleButtonClick = () => {
-      setIsOpen(!isOpen);
-    };
-  
+
     const handleCheckboxChange = (event) => {
       const value = event.target.value;
       setSelectedValues((prevValues) => {
@@ -17,6 +13,7 @@ export default function Products() {
           return [...prevValues, value];
         }
       });
+      console.log(value);
     };
   return (
     <div className='bg-gray-600 p-3'>
@@ -24,25 +21,25 @@ export default function Products() {
             <h1>Products</h1>
             <div className="relative inline-block">
                 <button className="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
-                    onClick={handleButtonClick}
+                    onClick={()=>setIsOpen(!isOpen)}
                     aria-expanded={isOpen}
                     aria-haspopup="true">
                     Select options
                 </button>
                 {isOpen && (
                     <div className="absolute z-10 top-10 right-0 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-                    <label className="block py-2 px-4 text-sm text-gray-700">
-                        <input type="checkbox" name="options" value="option1" checked={selectedValues.includes('option1')} onChange={handleCheckboxChange} />
-                        Option 1
-                    </label>
-                    <label className="block py-2 px-4 text-sm text-gray-700">
-                        <input type="checkbox" name="options" value="option2" checked={selectedValues.includes('option2')} onChange={handleCheckboxChange} />
-                        Option 2
-                    </label>
-                    <label className="block py-2 px-4 text-sm text-gray-700">
-                        <input type="checkbox" name="options" value="option3" checked={selectedValues.includes('option3')} onChange={handleCheckboxChange} />
-                        Option 3
-                    </label>
+                        <label className="block py-2 px-4 text-sm text-gray-700">
+                            <input type="checkbox" name="options" value="option1" checked={selectedValues.includes('option1')} onChange={handleCheckboxChange} />
+                            Option 1
+                        </label>
+                        <label className="block py-2 px-4 text-sm text-gray-700">
+                            <input type="checkbox" name="options" value="option2" checked={selectedValues.includes('option2')} onChange={handleCheckboxChange} />
+                            Option 2
+                        </label>
+                        <label className="block py-2 px-4 text-sm text-gray-700">
+                            <input type="checkbox" name="options" value="option3" checked={selectedValues.includes('option3')} onChange={handleCheckboxChange} />
+                            Option 3
+                        </label>
                     </div>
                 )}
             </div>
