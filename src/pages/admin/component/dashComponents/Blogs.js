@@ -1,21 +1,53 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Data from '../../../../data/blogs.json'
 
 export default function Blogs() {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedValues, setSelectedValues] = useState([]);
+    const [blogsData, setBlogsData] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleCheckboxChange = (event) => {
       const value = event.target.value;
+      
       setSelectedValues((prevValues) => {
         if (prevValues.includes(value)) {
-          return prevValues.filter((v) => v !== value);
+          return [...prevValues.filter((v) => v !== value)];
         } else {
           return [...prevValues, value];
         }
       });
-      console.log(value);
+
+      const updatedData = blogsData?.map(blogData => {
+        if (blogData.value === value) {
+          return { ...blogData, isSelected: true };
+        }
+        return blogData;
+      });
+      
+      console.log(updatedData);
     };
+
+    // fetch blogs data from json
+    useEffect(() => {
+        setIsLoading(true);
+        fetch(`blogs.json`)
+            .then(response => response.json())
+            .then(blogData => {
+                setBlogsData(blogData);
+                setIsLoading(false);
+            })
+            .catch(error => console.log('Error fetching data:', error));
+    }, []);
+    
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
+    
+    if (!blogsData) {
+        return <div>No data found</div>;
+    }
+
   return (
     <div>
         <div className='flex items-center justify-between'>
@@ -27,20 +59,15 @@ export default function Blogs() {
                     aria-haspopup="true">
                     Select options
                 </button>
-                {isOpen && (
+                {(isOpen && blogsData.length > 0) && (
                     <div className="absolute z-10 top-10 right-0 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-                        <label className="block py-2 px-4 text-sm text-gray-700">
-                            <input type="checkbox" name="options" value="option1" checked={selectedValues.includes('option1')} onChange={handleCheckboxChange} />
-                            Option 1
-                        </label>
-                        <label className="block py-2 px-4 text-sm text-gray-700">
-                            <input type="checkbox" name="options" value="option2" checked={selectedValues.includes('option2')} onChange={handleCheckboxChange} />
-                            Option 2
-                        </label>
-                        <label className="block py-2 px-4 text-sm text-gray-700">
-                            <input type="checkbox" name="options" value="option3" checked={selectedValues.includes('option3')} onChange={handleCheckboxChange} />
-                            Option 3
-                        </label>
+                        {
+                            blogsData.map(blogData => (
+                            <label className="block py-2 px-4 text-sm text-gray-700">
+                                <input type="checkbox" name="options" value={blogData?.value} checked={selectedValues.includes(`${blogData?.value}`)} onChange={handleCheckboxChange} />
+                                {blogData?.title}
+                            </label>))
+                        }
                     </div>
                 )}
             </div>
