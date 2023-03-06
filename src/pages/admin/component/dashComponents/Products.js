@@ -29,7 +29,7 @@ export default function Products() {
           </button>
           {isOpen && (
             <div className='absolute z-10 top-10 right-0 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5'>
-              <label className='block py-2 px-4 text-sm text-gray-700'>
+              <label className='block py-2 px-4 text-sm text-gray-700 cursor-pointer'>
                 <input
                   type='checkbox'
                   name='options'
@@ -39,7 +39,7 @@ export default function Products() {
                 />
                 Option 1
               </label>
-              <label className='block py-2 px-4 text-sm text-gray-700'>
+              <label className='block py-2 px-4 text-sm text-gray-700 cursor-pointer'>
                 <input
                   type='checkbox'
                   name='options'
@@ -49,7 +49,7 @@ export default function Products() {
                 />
                 Option 2
               </label>
-              <label className='block py-2 px-4 text-sm text-gray-700'>
+              <label className='block py-2 px-4 text-sm text-gray-700 cursor-pointer'>
                 <input
                   type='checkbox'
                   name='options'

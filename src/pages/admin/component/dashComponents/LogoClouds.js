@@ -39,7 +39,7 @@ export default function LogoClouds() {
               {data?.map(({ value, title }) => (
                 <label
                   key={value}
-                  className='block py-2 px-4 text-sm text-gray-700'>
+                  className='block py-2 px-4 text-sm text-gray-700 cursor-pointer'>
                   <input
                     type='checkbox'
                     name='options'
