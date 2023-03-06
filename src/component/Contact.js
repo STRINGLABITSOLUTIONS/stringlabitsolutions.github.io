@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Contact() {
   return (
-    <body
+    <section
       id='contact'
       className='min-h-fit flex flex-col justify-center bg-white dark:bg-gray-900'>
       <div className='relative sm:py-16'>
@@ -79,6 +79,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </body>
+    </section>
   );
 }
