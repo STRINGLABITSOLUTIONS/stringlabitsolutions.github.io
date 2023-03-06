@@ -1,4 +1,5 @@
 import React from 'react'
+import Blogs from './dashComponents/Blogs'
 import Header from './dashComponents/Header'
 import Products from './dashComponents/Products'
 import Testimonials from './dashComponents/Testimonials'
@@ -28,7 +29,7 @@ export default function Dashboard() {
       </div>
       {/* --------Blogs-------- */}
       <div className='text-center bg-gray-600 col-span-6'>
-        <div>Blogs</div>
+        <Blogs/>
       </div>
     </div>
   )

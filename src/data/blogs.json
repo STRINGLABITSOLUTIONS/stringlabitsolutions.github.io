@@ -1,0 +1,22 @@
+[
+    {
+        "id" : 1,
+        "title" : "My first Blog",
+        "author" : "Piash"
+    },
+    {
+        "id" : 2,
+        "title" : "Opening Party",
+        "author" : "Megh"
+    },
+    {
+        "id" : 3,
+        "title" : "Cooking Food",
+        "author" : "Megh"
+    },
+    {
+        "id" : 4,
+        "title" : "Video Game",
+        "author" : "Piash"
+    }
+]
