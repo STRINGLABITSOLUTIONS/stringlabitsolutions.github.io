@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import Data from '../../../../data/blogs.json'
 
 export default function Blogs() {
     const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +30,7 @@ export default function Blogs() {
     // fetch blogs data from json
     useEffect(() => {
         setIsLoading(true);
-        fetch(`blogs.json`)
+        fetch(`data/blogs.json`)
             .then(response => response.json())
             .then(blogData => {
                 setBlogsData(blogData);
@@ -73,7 +72,7 @@ export default function Blogs() {
             </div>
         </div>
         <div className='p-2'>
-            {Data.map(data=>(
+            {blogsData.map(data=>(
                 <div key={data.id}className='bg-gray-500 mt-3 y-2' >
                     <h1>{data.title}</h1>
                     <p>{data.author}</p>
