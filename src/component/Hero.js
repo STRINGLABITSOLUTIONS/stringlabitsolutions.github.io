@@ -50,7 +50,7 @@ export default function hero() {
                     className='pl-3 w-full bg-white text-base font-medium cursor-pointer'
                     readOnly></input>
                   <label
-                    for='toggleJobLstCat'
+                    htmlFor='toggleJobLstCat'
                     className='absolute top-0 left-0 w-full h-full'></label>
                   <span className='min-w-max'>
                     <svg
