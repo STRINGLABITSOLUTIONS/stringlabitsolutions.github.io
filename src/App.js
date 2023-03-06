@@ -4,7 +4,7 @@ import Home from './pages/home/Home';
 import Login from './pages/authentication/Login';
 function App() {
   return (
-    <div className='bg-white dark:bg-gray-900'>
+    <div className='w-screen h-screen bg-white dark:bg-gray-900'>
       <BrowserRouter>
         <Routes>
           <Route>
