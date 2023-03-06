@@ -29,7 +29,7 @@ export default function Dashboard() {
         <div>Pricing</div>
       </div>
       {/* --------Blogs-------- */}
-      <div className='text-center bg-gray-600 col-span-6'>
+      <div className='col-span-6'>
         <Blogs/>
       </div>
     </div>

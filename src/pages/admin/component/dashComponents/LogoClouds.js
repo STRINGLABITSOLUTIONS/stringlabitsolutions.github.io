@@ -30,7 +30,7 @@ export default function LogoClouds() {
         }
       }
   return (
-    <div>
+    <div className='bg-gray-600 p-2'>
         <div className='flex items-center justify-between'>
             <h1>Logo Clouds</h1>
             <div className="relative inline-block">
@@ -45,7 +45,7 @@ export default function LogoClouds() {
                         {
                             items.map(item => (
                             <label className="block py-2 px-4 text-sm text-gray-700">
-                                <input type="checkbox" name="options" value={item?.value} checked={selectedItems.includes(`${item?.value}`)} onChange={handleCheckboxChange} />
+                                <input type="checkbox" name="options" value={item?.value} checked={selectedItems.includes(item?.value)} onChange={handleCheckboxChange} />
                                 {item?.title}
                             </label>))
                         }
@@ -55,7 +55,7 @@ export default function LogoClouds() {
         </div>
         <div className='p-2'>
             {items.filter(data => selectedItems.includes(data.value)).map(data=>(
-                <div key={data.id}className='bg-gray-500 mt-3 y-2' >
+                <div key={data.id} className='bg-gray-500 mt-3 p-2 rounded-lg' >
                     <h1>{data.title}</h1>
                     <p>{data.author}</p>
                 </div>
