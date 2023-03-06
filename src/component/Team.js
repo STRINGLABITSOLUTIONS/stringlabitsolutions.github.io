@@ -23,7 +23,7 @@ export default function Team() {
   ];
 
   return (
-    <div id='about' className='py-20'>
+    <section id='about' className='py-20'>
       <div className='container mx-auto px-6 text-center md:px-12'>
         <div className='mb-16'>
           <h2 className='mb-4 text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl'>
@@ -71,6 +71,6 @@ export default function Team() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

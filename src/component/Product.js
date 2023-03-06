@@ -27,7 +27,7 @@ export default function Product() {
   ];
 
   return (
-    <div className='py-16'>
+    <section className='py-16'>
       <div className='xl:container m-auto px-6 text-gray-600 md:px-12 xl:px-6'>
         <div className='m-auto text-center lg:w-8/12 xl:w-7/12 mt-10 mb-10'>
           <h2 className='text-2xl font-bold text-gray-800 dark:text-white md:text-4xl'>
@@ -67,6 +67,6 @@ export default function Product() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

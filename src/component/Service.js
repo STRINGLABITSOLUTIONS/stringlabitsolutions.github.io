@@ -33,7 +33,7 @@ export default function Service() {
   ];
 
   return (
-    <div id='product' className='relative py-16'>
+    <section id='product' className='relative py-16'>
       <div className='container relative m-auto px-6 text-gray-500 md:px-12'>
         <div className='m-auto text-center lg:w-8/12 xl:w-7/12 mt-10 mb-10'>
           <h2 className='text-2xl font-bold text-gray-800 dark:text-white md:text-4xl'>
@@ -62,6 +62,6 @@ export default function Service() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

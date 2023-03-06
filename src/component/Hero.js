@@ -14,7 +14,7 @@ export default function hero() {
   const icon5 =
     'https://tailus.io/sources/blocks/job-board/preview/images/clients/grabyo.png';
   return (
-    <div id='home' className='h-screen overflow-hidden'>
+    <section id='home' className='h-screen overflow-hidden'>
       <div className='relative'>
         <img
           className='absolute inset-0 w-screen h-screen object-cover object-top'
@@ -167,6 +167,6 @@ export default function hero() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

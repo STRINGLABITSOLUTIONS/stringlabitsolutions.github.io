@@ -6,7 +6,7 @@ export default function Pricing() {
   const icon2 =
     'https://tailus.io/sources/blocks/team/preview/images/premium.webp';
   return (
-    <div
+    <section
       id='pricing'
       className='xl:container m-auto px-6 py-20 md:px-12 lg:px-20'>
       <div className='m-auto text-center lg:w-8/12 xl:w-7/12'>
@@ -192,6 +192,6 @@ export default function Pricing() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
