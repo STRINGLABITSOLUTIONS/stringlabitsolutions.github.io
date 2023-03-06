@@ -60,7 +60,7 @@ export default function Contact() {
                           fill='currentColor'
                           className='relative w-5 h-5 text-white dark:text-gray-900 sm:hidden'>
                           <path
-                            fill-rule='evenodd'
+                            fillRule='evenodd'
                             d='M3.75 12a.75.75 0 01.75-.75h13.19l-5.47-5.47a.75.75 0 011.06-1.06l6.75 6.75a.75.75 0 010 1.06l-6.75 6.75a.75.75 0 11-1.06-1.06l5.47-5.47H4.5a.75.75 0 01-.75-.75z'
                             clip-rule='evenodd'
                           />
