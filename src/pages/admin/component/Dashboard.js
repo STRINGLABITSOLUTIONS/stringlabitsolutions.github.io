@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './dashComponents/Header'
 import Products from './dashComponents/Products'
+import Testimonials from './dashComponents/Testimonials'
 
 export default function Dashboard() {
   return (
@@ -10,12 +11,12 @@ export default function Dashboard() {
         <Header/>
       </div>
       {/* --------Products-------- */}
-      <div className='col-span-8'>
+      <div className='col-span-7'>
         <Products/>
       </div>
       {/* --------Testimonials-------- */}
-      <div className='text-center bg-gray-600 col-span-4'>
-        <div>Testimonials</div>
+      <div className='col-span-5'>
+        <Testimonials/>
       </div>
       {/* --------logo Clouds-------- */}
       <div className='text-center bg-gray-600 col-span-3'>
