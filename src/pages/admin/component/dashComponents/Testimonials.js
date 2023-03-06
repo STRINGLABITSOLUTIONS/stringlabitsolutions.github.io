@@ -1,9 +1,12 @@
 import React from 'react';
+import { BiMessageSquareDetail } from 'react-icons/bi';
 
 export default function Testimonials() {
   return (
     <section className='p-2 bg-gray-600'>
-      <div>Testimonials</div>
+      <div className='flex items-center gap-3'>
+        <BiMessageSquareDetail /> Testimonials
+      </div>
       <div className='p-2 rounded-lg'>
         <ul>
           <li className='mt-3 py-2 px-2 bg-gray-500 rounded-lg'>

@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
+import { BiLogOut } from 'react-icons/bi';
+import { HiDocumentReport } from 'react-icons/hi';
+import { RiDashboardFill, RiSettings4Fill } from 'react-icons/ri';
+import { RxChevronDown } from 'react-icons/rx';
 import Dashboard from './component/Dashboard';
 
 export default function AdminPanel() {
@@ -11,12 +15,12 @@ export default function AdminPanel() {
     {
       id: uuidv4(),
       title: 'Dashboard',
-      icon: '',
+      icon: <RiDashboardFill />,
     },
     {
       id: uuidv4(),
       title: 'Report',
-      icon: '',
+      icon: <HiDocumentReport />,
     },
   ];
   const settingMenuItems = [
@@ -63,7 +67,7 @@ export default function AdminPanel() {
           <nav className='flex-grow'>
             <ul className='flex flex-col py-4'>
               {/* ========================menu start======================== */}
-              {menuItems?.map(({ id, title }) => (
+              {menuItems?.map(({ id, title, icon }) => (
                 <li
                   key={id}
                   className={`${
@@ -73,7 +77,10 @@ export default function AdminPanel() {
                   } pl-6 pr-4 py-2 cursor-pointer`}
                   onClick={() => handleTabClick(title)}>
                   <i className='fa fa-tachometer mr-3'></i>
-                  {title ?? 'No Title'}
+                  <span className='flex items-center gap-3'>
+                    {icon}
+                    {title ?? 'No Title'}
+                  </span>
                 </li>
               ))}
               {/* ========================menuItem end======================== */}
@@ -91,7 +98,13 @@ export default function AdminPanel() {
                   className={`fa fa-cog mr-3 ${
                     settingsExpanded ? 'rotate-90' : ''
                   }`}></i>
-                Settings
+                <span className='flex items-center justify-between gap-3'>
+                  <span className='flex items-center gap-3'>
+                    <RiSettings4Fill />
+                    Settings
+                  </span>
+                  <RxChevronDown />
+                </span>
                 <ul
                   className={`${
                     settingsExpanded ? 'block' : 'hidden'
@@ -117,7 +130,10 @@ export default function AdminPanel() {
           </nav>
         </div>
         <div className='text-center py-4'>
-          <NavLink to='/' className='text-gray-400 hover:text-white'>
+          <NavLink
+            to='/'
+            className='flex items-center justify-center gap-3 text-gray-400 hover:text-white'>
+            <BiLogOut />
             Logout
           </NavLink>
           <div className='border-t mt-5 pt-5 text-xs'>

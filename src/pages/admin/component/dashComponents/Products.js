@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { RiProductHuntFill } from 'react-icons/ri';
 
 export default function Products() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,9 @@ export default function Products() {
   return (
     <section className='bg-gray-600 p-3'>
       <div className='flex items-center justify-between'>
-        <h1>Products</h1>
+        <h1 className='flex items-center gap-3'>
+          <RiProductHuntFill /> Products
+        </h1>
         <div className='relative inline-block'>
           <button
             className='py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'
