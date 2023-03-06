@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Logo from '../media/images/logo.png';
+import Logo from '../../media/images/logo.png';
 
 export default function Login() {
   return (

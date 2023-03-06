@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AdminPanel from './pages/admin/AdminPanel';
 import Home from './pages/home/Home';
-import Login from './pages/Login';
+import Login from './pages/authentication/Login';
 function App() {
   return (
     <div className='bg-white dark:bg-gray-900'>
