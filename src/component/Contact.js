@@ -43,7 +43,7 @@ export default function Contact() {
                       type='text'
                       name='username'
                       id='username'
-                      autocomplete='username'
+                      autoComplete='username'
                       placeholder='Phone number or email'
                       className='focus:outline-none block w-full rounded-full placeholder-gray-500 bg-gray-100 dark:bg-gray-800 dark:border-gray-600 pl-12 pr-4 h-12 text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:ring-2 focus:ring-primary'
                     />

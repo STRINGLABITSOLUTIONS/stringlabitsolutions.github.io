@@ -32,7 +32,7 @@ export default function Login() {
                     type='email'
                     name='email'
                     id='email'
-                    autocomplete='username'
+                    autoComplete='username'
                     className='focus:outline-none block w-full rounded-md border border-gray-200 dark:border-gray-600 bg-transparent px-4 py-3 text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:ring-2 focus:ring-cyan-300'
                   />
                 </div>
@@ -54,7 +54,7 @@ export default function Login() {
                     type='password'
                     name='pwd'
                     id='pwd'
-                    autocomplete='current-password'
+                    autoComplete='current-password'
                     className='focus:outline-none block w-full rounded-md border border-gray-200 dark:border-gray-600 bg-transparent px-4 py-3 text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:ring-2 focus:ring-cyan-300'
                   />
                 </div>
