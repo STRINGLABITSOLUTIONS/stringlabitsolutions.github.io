@@ -103,7 +103,7 @@ export default function Pricing() {
                     <li>
                       <div className='relative'>
                         <input
-                          checked
+                          defaultChecked
                           hidden
                           className='peer'
                           type='radio'
