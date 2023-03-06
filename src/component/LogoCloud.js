@@ -46,12 +46,12 @@ export default function LogoCloud() {
         </div>
         <div className='m-auto mt-16 md:w-11/12 lg:w-8/12 xl:w-7/12'>
           <div className='flex flex-wrap justify-center gap-6'>
-            {logos?.map((logo) => (
+            {logos?.map(({ id, link }) => (
               <div
-                key={logo?.id}
+                key={id}
                 className='group rounded-xl border border-gray-200 dark:border-gray-600 bg-white bg-opacity-5 py-2 px-4 hover:bg-opacity-10'>
                 <img
-                  src={logo?.link}
+                  src={link ?? '404'}
                   className='contrast-0 transition group-hover:contrast-100'
                   loading='lazy'
                   alt='logo airbnb'

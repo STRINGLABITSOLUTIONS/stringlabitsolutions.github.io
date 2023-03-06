@@ -37,18 +37,18 @@ export default function Blogs() {
           </button>
           {isOpen && data?.length > 0 && (
             <div className='absolute z-10 top-10 right-0 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5'>
-              {data?.map((item) => (
+              {data?.map(({ id, value, title }) => (
                 <label
-                  key={item?.id}
+                  key={id}
                   className='block py-2 px-4 text-sm text-gray-700'>
                   <input
                     type='checkbox'
                     name='options'
-                    value={item?.value}
-                    checked={selectedItems.includes(item?.value)}
+                    value={value}
+                    checked={selectedItems.includes(value)}
                     onChange={handleCheckboxChange}
                   />
-                  {item?.title}
+                  {title ?? 'No Title'}
                 </label>
               ))}
             </div>
@@ -57,11 +57,11 @@ export default function Blogs() {
       </div>
       <div className='p-2'>
         {data
-          ?.filter((data) => selectedItems.includes(data?.value))
-          .map((data) => (
-            <div key={data?.id} className='bg-gray-500 mt-3 p-2 rounded-lg'>
-              <h1>{data?.title}</h1>
-              <p>{data?.author}</p>
+          ?.filter(({ value }) => selectedItems.includes(value))
+          .map(({ id, title, author }) => (
+            <div key={id} className='bg-gray-500 mt-3 p-2 rounded-lg'>
+              <h1>{title}</h1>
+              <p>{author}</p>
             </div>
           ))}
       </div>

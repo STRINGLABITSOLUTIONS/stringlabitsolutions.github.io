@@ -41,20 +41,20 @@ export default function Service() {
           </h2>
         </div>
         <div className='grid gap-6 md:mx-auto md:w-8/12 lg:w-full lg:grid-cols-3'>
-          {services?.map((service) => (
+          {services?.map(({ id, image, title, description }) => (
             <div
-              key={service?.id}
+              key={id}
               className='group space-y-6 border border-gray-100 dark:border-gray-700 rounded-3xl bg-white dark:bg-gray-800 px-8 py-12 text-center shadow-2xl shadow-gray-600/10 dark:shadow-none'>
               <img
                 className='mx-auto w-24'
-                src={service?.image}
+                src={image ?? '404'}
                 alt='illustration'
                 loading='lazy'
               />
               <h3 className='text-2xl font-semibold text-gray-800 dark:text-white'>
-                {service?.title}
+                {title ?? 'No Title'}
               </h3>
-              <p>{service?.description}</p>
+              <p>{description ?? 'No Description'}</p>
               <button className='relative mx-auto flex h-10 w-10 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-100 dark:before:border-gray-600 before:transition before:duration-300 group-hover:before:scale-125'>
                 <span className='text-primary'>→</span>
               </button>

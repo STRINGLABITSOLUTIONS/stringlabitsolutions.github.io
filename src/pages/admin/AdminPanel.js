@@ -63,17 +63,17 @@ export default function AdminPanel() {
           <nav className='flex-grow'>
             <ul className='flex flex-col py-4'>
               {/* ========================menu start======================== */}
-              {menuItems?.map((item) => (
+              {menuItems?.map(({ id, title }) => (
                 <li
-                  key={item?.id}
+                  key={id}
                   className={`${
-                    activeTab === item?.title
+                    activeTab === title
                       ? 'bg-gray-900 text-white'
                       : 'text-gray-400 hover:text-white hover:bg-slate-700'
                   } pl-6 pr-4 py-2 cursor-pointer`}
-                  onClick={() => handleTabClick(item?.title)}>
+                  onClick={() => handleTabClick(title)}>
                   <i className='fa fa-tachometer mr-3'></i>
-                  {item?.title}
+                  {title ?? 'No Title'}
                 </li>
               ))}
               {/* ========================menuItem end======================== */}
@@ -96,18 +96,18 @@ export default function AdminPanel() {
                   className={`${
                     settingsExpanded ? 'block' : 'hidden'
                   } ml-4 mt-2 transition-all duration-500 ease-in-out`}>
-                  {settingMenuItems?.map((settingMenuItem) => (
+                  {settingMenuItems?.map(({ id, title }) => (
                     <li
-                      key={settingMenuItem?.id}
+                      key={id}
                       className={`${
-                        activeTab === settingMenuItem?.title
+                        activeTab === title
                           ? 'bg-gray-800 text-white'
                           : 'text-gray-400 hover:text-white hover:bg-slate-700'
                       } pl-2 pr-4 py-2 cursor-pointer`}
                       onClick={() => {
-                        handleTabClick(settingMenuItem?.title);
+                        handleTabClick(title);
                       }}>
-                      ↳ {settingMenuItem?.title}
+                      ↳ {title ?? 'No Title'}
                     </li>
                   ))}
                 </ul>

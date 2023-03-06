@@ -38,14 +38,14 @@ export default function Team() {
           </p>
         </div>
         <div className='grid gap-28 py-20 md:grid-cols-2 md:gap-12'>
-          {teamMembers?.map((teamMember) => (
+          {teamMembers?.map(({ id, image, name, designation, bioLink }) => (
             <div
-              key={teamMember?.id}
+              key={id}
               className='group space-y-8 border-t-4 border-gray-100 dark:border-gray-800'>
               <div className='mx-auto -mt-16 h-32 w-32 rotate-45 overflow-hidden rounded-[2rem]'>
                 <img
                   className='mx-auto h-full w-full -rotate-45 scale-125 object-cover transition duration-300 group-hover:scale-[1.4]'
-                  src={teamMember?.image}
+                  src={image ?? '404'}
                   alt='leader images'
                   loading='lazy'
                   width='640'
@@ -55,14 +55,14 @@ export default function Team() {
               <div className='space-y-4 text-center'>
                 <div>
                   <h4 className='text-2xl text-gray-700 dark:text-white'>
-                    {teamMember?.name}
+                    {name ?? 'No Name'}
                   </h4>
                   <span className='block text-sm text-gray-500'>
-                    {teamMember?.designation}
+                    {designation ?? 'No Designation'}
                   </span>
                 </div>
                 <NavLink
-                  to={teamMember?.bioLink}
+                  to={bioLink ?? '404'}
                   className='mx-auto block w-max text-gray-500 p-1 rounded-full hover:ring-1'>
                   View Bio
                 </NavLink>
