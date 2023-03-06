@@ -3,6 +3,7 @@ import Blogs from './dashComponents/Blogs'
 import Header from './dashComponents/Header'
 import Products from './dashComponents/Products'
 import Testimonials from './dashComponents/Testimonials'
+import LogoClouds from './dashComponents/LogoClouds'
 
 export default function Dashboard() {
   return (
@@ -20,8 +21,8 @@ export default function Dashboard() {
         <Testimonials/>
       </div>
       {/* --------logo Clouds-------- */}
-      <div className='text-center bg-gray-600 col-span-3'>
-        <div>logo Clouds</div>        
+      <div className='col-span-3'>
+        <LogoClouds/>       
       </div>
       {/* --------Pricing-------- */}
       <div className='text-center bg-gray-600 col-span-3'>

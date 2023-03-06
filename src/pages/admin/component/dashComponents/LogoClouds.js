@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export default function Blogs() {
+export default function LogoClouds() {
     const [isOpen, setIsOpen] = useState(false);
     const [items, setitems] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
@@ -29,11 +29,10 @@ export default function Blogs() {
           setSelectedItems(selectedItems.filter(item => item !== value));
         }
       }
-
   return (
     <div>
         <div className='flex items-center justify-between'>
-            <h1>Blogs</h1>
+            <h1>Logo Clouds</h1>
             <div className="relative inline-block">
                 <button className="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
                     onClick={()=>setIsOpen(!isOpen)}
