@@ -7,7 +7,7 @@ export default function Header() {
         <div className='flex space-x-6'>
             <h1>User Name</h1>
             <div className='bg-purple-300 rounded-full ring-4 ring-green-500 w-6 h-6'></div>
-            <div className='font-bold text-xl'>⁝</div>
+            <button className='font-bold text-xl'>⁝</button>
         </div>
     </div>
   )

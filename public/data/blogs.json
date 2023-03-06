@@ -1,0 +1,30 @@
+[
+    {
+        "id" : 1,
+        "title" : "My first Blog",
+        "author" : "Piash",
+        "value" : "option-1",
+        "isSelected" : false
+    },
+    {
+        "id" : 2,
+        "title" : "Opening Party",
+        "author" : "Megh",
+        "value" : "option-2",
+        "isSelected" : false
+    },
+    {
+        "id" : 3,
+        "title" : "Cooking Food",
+        "author" : "Megh",
+        "value" : "option-3",
+        "isSelected" : false
+    },
+    {
+        "id" : 4,
+        "title" : "Video Game",
+        "author" : "Piash",
+        "value" : "option-4",
+        "isSelected" : false
+    }
+]
