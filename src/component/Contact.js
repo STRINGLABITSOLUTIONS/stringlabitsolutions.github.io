@@ -30,7 +30,7 @@ export default function Contact() {
                       xmlns='http://www.w3.org/2000/svg'
                       fill='none'
                       viewBox='0 0 24 24'
-                      stroke-width='1.5'
+                      strokeWidth='1.5'
                       stroke='currentColor'
                       className='w-6 h-6 absolute left-4 inset-y-0 my-auto'>
                       <path
