@@ -103,7 +103,7 @@ export default function AdminPanel() {
                     <RiSettings4Fill />
                     Settings
                   </span>
-                  <RxChevronDown />
+                  <RxChevronDown className={`${settingsExpanded?'rotate-180':''}`}/>
                 </span>
                 <ul
                   className={`${
