@@ -1,0 +1,16 @@
+[
+    {
+        "id":1,
+        "name": "Microsoft",
+        "link": "../media/images/microsoft.png",
+        "value" : "option-1",
+        "isSelected" : false
+    },
+    {
+        "id":2,
+        "name": "Lilly",
+        "link": "../media/images/lilly.png",
+        "value" : "option-2",
+        "isSelected" : false
+    }
+]

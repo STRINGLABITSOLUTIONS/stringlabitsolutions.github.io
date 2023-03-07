@@ -5,7 +5,7 @@ import useFetch from '../../../../hooks/useFetch';
 export default function LogoClouds() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedItems, setSelectedItems] = useState([]);
-  const { isLoading, data, error } = useFetch('data/blogs.json');
+  const { isLoading, data, error } = useFetch('data/logos.json');
 
   isLoading && <div>Loading...</div>;
 
@@ -40,7 +40,7 @@ export default function LogoClouds() {
           </button>
           {isOpen && data?.length > 0 && (
             <div className='absolute z-10 top-10 right-0 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5'>
-              {data?.map(({ value, title }) => (
+              {data?.map(({ value, name }) => (
                 <label
                   key={value}
                   className='block py-2 px-4 text-sm text-gray-700 cursor-pointer'>
@@ -51,7 +51,7 @@ export default function LogoClouds() {
                     checked={selectedItems.includes(value ?? 'no-value')}
                     onChange={handleCheckboxChange}
                   />
-                  {title ?? 'No Title'}
+                  {name ?? 'No Title'}
                 </label>
               ))}
             </div>
@@ -61,10 +61,13 @@ export default function LogoClouds() {
       <div className='p-2'>
         {data
           ?.filter(({ value }) => selectedItems.includes(value))
-          ?.map(({ id, title, author }) => (
+          ?.map(({ id, name, link }) => (
             <div key={id} className='bg-gray-500 mt-3 p-2 rounded-lg'>
-              <h1>{title ?? 'No Title'}</h1>
-              <p>{author ?? 'No Author'}</p>
+              <h1>{name ?? 'No name'}</h1>
+              <img 
+                className='h-10 grayscale hover:grayscale-0 flex place-items-end'
+                src={link} 
+                alt="" />
             </div>
           ))}
       </div>
