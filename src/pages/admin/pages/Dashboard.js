@@ -1,7 +1,6 @@
 import React from 'react';
 import { BiMoneyWithdraw } from 'react-icons/bi';
 import Blogs from '../component/dashComponents/Blogs';
-import Header from '../component/Header';
 import Products from '../component/dashComponents/Products';
 import Testimonials from '../component/dashComponents/Testimonials';
 import LogoClouds from '../component/dashComponents/LogoClouds';
@@ -9,10 +8,6 @@ import LogoClouds from '../component/dashComponents/LogoClouds';
 export default function Dashboard() {
   return (
     <div className='grid grid-cols-12 gap-2'>
-      {/* --------Header-------- */}
-      <div className='col-span-12'>
-        <Header />
-      </div>
       {/* --------Products-------- */}
       <div className='col-span-7'>
         <Products />

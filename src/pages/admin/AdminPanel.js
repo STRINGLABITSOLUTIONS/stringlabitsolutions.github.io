@@ -7,6 +7,7 @@ import { RiDashboardFill, RiSettings4Fill } from 'react-icons/ri';
 import { RxChevronDown } from 'react-icons/rx';
 import Dashboard from './pages/Dashboard';
 import ProjectSetting from './pages/ProjectSetting';
+import Header from './component/Header';
 
 export default function AdminPanel() {
   const [activeTab, setActiveTab] = useState('Dashboard');
@@ -143,6 +144,7 @@ export default function AdminPanel() {
         </div>
       </div>
       <div className='flex-1 bg-gray-700 text-gray-50'>
+        <Header/>
         <div className='p-6'>
           {activeTab === 'Dashboard' && <Dashboard />}
           {activeTab === 'Report' && <h2>Reports</h2>}
