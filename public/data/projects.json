@@ -6,6 +6,8 @@
         "title": "BONIK - Inventory Management System: Model Pharmecy",
         "description": "To increase your performance and productivity for your model pharmecy 'BONIK' will be your perfect choise",
         "link": "#",
+        "Category": "Web aplication",
+        "platform": "Desktop",
         "date": "Aug 27 2022",
         "value" : "option-1",
         "isSelected" : false
@@ -17,6 +19,8 @@
         "title": "BHUJON - Restaurant Management System: Offline Services",
         "description": "To increase your performance and productivity for your model pharmecy 'BHUJON' will be your perfect choise",
         "link": "#",
+        "Category": "Web aplication",
+        "platform": "Cross",
         "date": "Feb 08 2023",
         "value" : "option-2",
         "isSelected" : false
