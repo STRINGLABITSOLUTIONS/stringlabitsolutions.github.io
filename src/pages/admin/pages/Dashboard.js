@@ -1,7 +1,7 @@
 import React from 'react';
 import { BiMoneyWithdraw } from 'react-icons/bi';
 import Blogs from '../component/dashComponents/Blogs';
-import Header from '../component/dashComponents/Header';
+import Header from '../component/Header';
 import Products from '../component/dashComponents/Products';
 import Testimonials from '../component/dashComponents/Testimonials';
 import LogoClouds from '../component/dashComponents/LogoClouds';
