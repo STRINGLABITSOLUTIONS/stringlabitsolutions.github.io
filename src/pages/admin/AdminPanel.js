@@ -9,6 +9,7 @@ import Dashboard from './pages/Dashboard';
 import ProjectSetting from './pages/ProjectSetting';
 import Header from './component/Header';
 import BlogSetting from './pages/BlogSetting';
+import LogoSetting from './pages/LogoSetting';
 
 export default function AdminPanel() {
   const [activeTab, setActiveTab] = useState('Dashboard');
@@ -152,7 +153,7 @@ export default function AdminPanel() {
           {activeTab === 'Products' && <ProjectSetting/>}
           {activeTab === 'Pricing' && <h2>Pricing Settings</h2>}
           {activeTab === 'Blogs' && <BlogSetting/>}
-          {activeTab === 'Logos' && <h2>Logos Settings</h2>}
+          {activeTab === 'Logos' && <LogoSetting/>}
           {activeTab === 'About' && <h2>Pricing Settings</h2>}
         </div>
       </div>
