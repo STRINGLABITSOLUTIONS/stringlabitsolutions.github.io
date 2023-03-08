@@ -144,7 +144,7 @@ export default function AdminPanel() {
         </div>
       </div>
       <div className='flex-1 bg-gray-700 text-gray-50'>
-        <Header/>
+        <Header title={activeTab}/>
         <div className='p-6'>
           {activeTab === 'Dashboard' && <Dashboard />}
           {activeTab === 'Report' && <h2>Reports</h2>}
