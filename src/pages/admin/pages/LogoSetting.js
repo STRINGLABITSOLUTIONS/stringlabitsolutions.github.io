@@ -6,8 +6,6 @@ export default function LogoSetting() {
 
     const [currentPage, setCurrentPage] = useState(1);
 
-    const pageNumbers = [];
-
     const data = {
     item1: "Lorem ipsum dolor sit amet",
     item2: "Consectetur adipiscing elit",
@@ -26,6 +24,7 @@ export default function LogoSetting() {
     item15: "Ut enim ad minim veniam",
     };
 
+    const pageNumbers = [];
     for (let i = 1; i <= Math.ceil(Object.keys(data).length / itemsPerPage); i++) {
         pageNumbers.push(i);
     }
