@@ -6,6 +6,7 @@ import { HiDocumentReport } from 'react-icons/hi';
 import { RiDashboardFill, RiSettings4Fill } from 'react-icons/ri';
 import { RxChevronDown } from 'react-icons/rx';
 import Dashboard from './pages/Dashboard';
+import ProjectSetting from './pages/ProjectSetting';
 
 export default function AdminPanel() {
   const [activeTab, setActiveTab] = useState('Dashboard');
@@ -145,7 +146,7 @@ export default function AdminPanel() {
         <div className='p-6'>
           {activeTab === 'Dashboard' && <Dashboard />}
           {activeTab === 'Report' && <h2>Reports</h2>}
-          {activeTab === 'Products' && <h2>Products Settings</h2>}
+          {activeTab === 'Products' && <ProjectSetting/>}
           {activeTab === 'Pricing' && <h2>Pricing Settings</h2>}
           {activeTab === 'Blogs' && <h2>Blogs Settings</h2>}
           {activeTab === 'Logos' && <h2>Logos Settings</h2>}
