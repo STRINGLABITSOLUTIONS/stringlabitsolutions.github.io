@@ -5,7 +5,7 @@ import { BiLogOut } from 'react-icons/bi';
 import { HiDocumentReport } from 'react-icons/hi';
 import { RiDashboardFill, RiSettings4Fill } from 'react-icons/ri';
 import { RxChevronDown } from 'react-icons/rx';
-import Dashboard from './component/Dashboard';
+import Dashboard from './pages/Dashboard';
 
 export default function AdminPanel() {
   const [activeTab, setActiveTab] = useState('Dashboard');

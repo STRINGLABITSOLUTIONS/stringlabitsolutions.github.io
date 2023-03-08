@@ -1,10 +1,10 @@
 import React from 'react';
 import { BiMoneyWithdraw } from 'react-icons/bi';
-import Blogs from './dashComponents/Blogs';
-import Header from './dashComponents/Header';
-import Products from './dashComponents/Products';
-import Testimonials from './dashComponents/Testimonials';
-import LogoClouds from './dashComponents/LogoClouds';
+import Blogs from '../component/dashComponents/Blogs';
+import Header from '../component/dashComponents/Header';
+import Products from '../component/dashComponents/Products';
+import Testimonials from '../component/dashComponents/Testimonials';
+import LogoClouds from '../component/dashComponents/LogoClouds';
 
 export default function Dashboard() {
   return (
