@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Header(props) {
   return (
-    <div className='flex items-center justify-between m-auto px-6 pt-4'>
+    <div className='flex items-center justify-between m-auto px-6 pt-4 shadow-xl'>
         <h1>{props.title}</h1>
         <div className='flex space-x-6'>
             <h1>User Name</h1>

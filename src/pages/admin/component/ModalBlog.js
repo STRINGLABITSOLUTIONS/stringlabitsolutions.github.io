@@ -13,11 +13,11 @@ export default function ModalBlog({mData, visible, onClose}) {
         <div className='absolute -top-2 -right-2'>
             <CgCloseO onClick={onClose} size={32} className='cursor-pointer text-red-400 hover:scale-110 hover:text-red-500'/>
         </div>
-        <div className='flex items-center justify-center mx-auto'>
-            <h1 className='text-xl p-3'>Edit Blog: {mData.title}</h1>
+        <div className='flex items-center justify-center mx-auto shadow-xl'>
+            <h1 className='text-xl p-3 font-bold text-yellow-300'>Edit Blog : {mData.title}</h1>
         </div>
-        <div className='w-56 h-10 bg-black'>
-            <p>{mData.title}</p>
+        <div className='w-full h-full flex items-center justify-center'>
+            <form action="" method="post"></form>
         </div>
       </div>
     </div>
