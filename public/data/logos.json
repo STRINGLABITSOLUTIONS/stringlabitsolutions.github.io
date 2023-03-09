@@ -1,0 +1,128 @@
+[
+    {
+        "id":1,
+        "name": "Google",
+        "link": "../media/logos/google.png",
+        "value" : "option-1",
+        "isSelected" : false
+    },
+    {
+        "id":2,
+        "name": "Government",
+        "link": "../media/logos/government.png",
+        "value" : "option-2",
+        "isSelected" : false
+    },
+    {
+        "id":3,
+        "name": "Grabyo",
+        "link": "../media/logos/grabyo.png",
+        "value" : "option-3",
+        "isSelected" : false
+    },
+    {
+        "id":4,
+        "name": "Honda",
+        "link": "../media/logos/honda.png",
+        "value" : "option-4",
+        "isSelected" : false
+    },
+    {
+        "id":5,
+        "name": "LG",
+        "link": "../media/logos/lg.png",
+        "value" : "option-5",
+        "isSelected" : false
+    },
+    {
+        "id":6,
+        "name": "Lifegroups",
+        "link": "../media/logos/lifegroups.png",
+        "value" : "option-6",
+        "isSelected" : false
+    },
+    {
+        "id":7,
+        "name": "Lilly",
+        "link": "../media/logos/lilly.png",
+        "value" : "option-7",
+        "isSelected" : false
+    },
+    {
+        "id":8,
+        "name": "Marvel",
+        "link": "../media/logos/marvel.png",
+        "value" : "option-8",
+        "isSelected" : false
+    },
+    {
+        "id":9,
+        "name": "Microsoft",
+        "link": "../media/logos/microsoft.png",
+        "value" : "option-9",
+        "isSelected" : false
+    },
+    {
+        "id":10,
+        "name": "Nagad",
+        "link": "../media/logos/nagad.png",
+        "value" : "option-10",
+        "isSelected" : false
+    },
+    {
+        "id":11,
+        "name": "Pepsi",
+        "link": "../media/logos/pepsi.png",
+        "value" : "option-11",
+        "isSelected" : false
+    },
+    {
+        "id":12,
+        "name": "Samsung",
+        "link": "../media/logos/samsung.png",
+        "value" : "option-12",
+        "isSelected" : false
+    },
+    {
+        "id":13,
+        "name": "Starbucks",
+        "link": "../media/logos/starbucks.png",
+        "value" : "option-13",
+        "isSelected" : false
+    },
+    {
+        "id":14,
+        "name": "Tesla",
+        "link": "../media/logos/tesla.png",
+        "value" : "option-14",
+        "isSelected" : false
+    },
+    {
+        "id":15,
+        "name": "Tiktok",
+        "link": "../media/logos/tiktok.png",
+        "value" : "option-15",
+        "isSelected" : false
+    },
+    {
+        "id":16,
+        "name": "Twiter",
+        "link": "../media/logos/twitter.png",
+        "value" : "option-16",
+        "isSelected" : false
+    },
+    {
+        "id":17,
+        "name": "VISA",
+        "link": "../media/logos/visa.png",
+        "value" : "option-17",
+        "isSelected" : false
+    },
+    {
+        "id":18,
+        "name": "VW",
+        "link": "../media/logos/vw.png",
+        "value" : "option-18",
+        "isSelected" : false
+    }
+]

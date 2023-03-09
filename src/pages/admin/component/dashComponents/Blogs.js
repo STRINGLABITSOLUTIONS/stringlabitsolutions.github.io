@@ -25,7 +25,7 @@ export default function Blogs() {
   }
 
   return (
-    <div className='bg-gray-600 p-2'>
+    <div className='bg-gray-600 h-96 p-2'>
       <div className='flex items-center justify-between'>
         <h1 className='flex items-center gap-3'>
           <BsBlockquoteRight />

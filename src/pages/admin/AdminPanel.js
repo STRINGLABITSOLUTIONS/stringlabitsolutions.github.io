@@ -5,7 +5,11 @@ import { BiLogOut } from 'react-icons/bi';
 import { HiDocumentReport } from 'react-icons/hi';
 import { RiDashboardFill, RiSettings4Fill } from 'react-icons/ri';
 import { RxChevronDown } from 'react-icons/rx';
-import Dashboard from './component/Dashboard';
+import Dashboard from './pages/Dashboard';
+import ProjectSetting from './pages/ProjectSetting';
+import Header from './component/Header';
+import BlogSetting from './pages/BlogSetting';
+import LogoSetting from './pages/LogoSetting';
 
 export default function AdminPanel() {
   const [activeTab, setActiveTab] = useState('Dashboard');
@@ -103,7 +107,7 @@ export default function AdminPanel() {
                     <RiSettings4Fill />
                     Settings
                   </span>
-                  <RxChevronDown />
+                  <RxChevronDown className={`${settingsExpanded?'rotate-180':''}`}/>
                 </span>
                 <ul
                   className={`${
@@ -142,13 +146,14 @@ export default function AdminPanel() {
         </div>
       </div>
       <div className='flex-1 bg-gray-700 text-gray-50'>
+        <Header title={activeTab}/>
         <div className='p-6'>
           {activeTab === 'Dashboard' && <Dashboard />}
           {activeTab === 'Report' && <h2>Reports</h2>}
-          {activeTab === 'Products' && <h2>Products Settings</h2>}
+          {activeTab === 'Products' && <ProjectSetting/>}
           {activeTab === 'Pricing' && <h2>Pricing Settings</h2>}
-          {activeTab === 'Blogs' && <h2>Blogs Settings</h2>}
-          {activeTab === 'Logos' && <h2>Logos Settings</h2>}
+          {activeTab === 'Blogs' && <BlogSetting/>}
+          {activeTab === 'Logos' && <LogoSetting/>}
           {activeTab === 'About' && <h2>Pricing Settings</h2>}
         </div>
       </div>
