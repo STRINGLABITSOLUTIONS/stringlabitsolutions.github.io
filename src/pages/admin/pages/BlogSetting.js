@@ -1,6 +1,10 @@
+import { useState } from 'react';
 import useFetch from '../../../hooks/useFetch';
+import ModalBlog from '../component/ModalBlog';
 
 export default function BlogSetting() {
+    const [showModal, setShoModal] = useState(false);
+
     const {isLoading, data, error } = useFetch(`data/blogs.json`);
 
     isLoading && <div>Loading...</div>;
@@ -37,7 +41,9 @@ export default function BlogSetting() {
                                 <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                                     View
                                 </button>
-                                <button className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">
+                                <button
+                                    onClick={()=> setShoModal(true)}
+                                    className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">
                                     Edit
                                 </button>
                                 <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
@@ -50,6 +56,7 @@ export default function BlogSetting() {
                 </tbody>
             </table>
         </div>
+        <ModalBlog onClose={()=>setShoModal(false)} visible={showModal}/>
     </div>
   )
 }
