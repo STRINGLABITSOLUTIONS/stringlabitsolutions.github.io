@@ -24,7 +24,7 @@ export default function Products() {
     }
   }
   return (
-    <section className='bg-gray-600 p-3 h-60'>
+    <section className='bg-gray-600 p-3 h-96'>
       <div className='flex items-center justify-between'>
         <h1 className='flex items-center gap-3'>
           <RiProductHuntFill /> Products
@@ -38,7 +38,7 @@ export default function Products() {
             Select Blogs
           </button>
           {isOpen && data?.length > 0 && (
-            <div className='absolute z-10 top-10 right-0 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5'>
+            <div className='absolute z-10 top-10 right-0 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 h-56 overflow-auto'>
               {data?.map(({ id, value, name }) => (
                 <label
                   key={id}
@@ -57,7 +57,7 @@ export default function Products() {
           )}
         </div>
       </div>
-      <div>
+      <div className='h-72 overflow-auto'>
         <ul>
         {data
           ?.filter(({ value }) => selectedItems.includes(value))

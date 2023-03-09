@@ -40,7 +40,7 @@ export default function Blogs() {
             Select Blogs
           </button>
           {isOpen && data?.length > 0 && (
-            <div className='absolute z-10 top-10 right-0 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5'>
+            <div className='absolute z-10 top-10 right-0 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 h-56 overflow-auto'>
               {data?.map(({ id, value, title }) => (
                 <label
                   key={id}
@@ -59,7 +59,7 @@ export default function Blogs() {
           )}
         </div>
       </div>
-      <div className='p-2'>
+      <div className='p-2  h-72 overflow-auto'>
         {data
           ?.filter(({ value }) => selectedItems.includes(value))
           .map(({ id, title, author }) => (

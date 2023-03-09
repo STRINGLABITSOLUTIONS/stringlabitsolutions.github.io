@@ -1,74 +1,68 @@
-import React, { useState } from "react";
+import useFetch from '../../../hooks/useFetch';
+import ReactPaginate from 'react-paginate';
+import { useState } from 'react';
 
 export default function LogoSetting() {
+    const {isLoading, data, error } = useFetch(`data/logos.json`);
+    const PER_PAGE = 5;
+    const [currentPage, setCurrentPage] = useState(0);
+    const offset = currentPage * PER_PAGE;
+    const currentPageData = data.slice(offset, offset + PER_PAGE);
+    const pageCount = Math.ceil(data.length / PER_PAGE);
 
-    const itemsPerPage = 5;
-
-    const [currentPage, setCurrentPage] = useState(1);
-
-    const data = {
-    item1: "Lorem ipsum dolor sit amet",
-    item2: "Consectetur adipiscing elit",
-    item3: "Sed do eiusmod tempor",
-    item4: "Incididunt ut labore et dolore magna aliqua",
-    item5: "Ut enim ad minim veniam",
-    item6: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-    item7: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-    item8: "Excepteur sint occaecat cupidatat non proident",
-    item9: "Sunt in culpa qui officia deserunt mollit anim id est laborum",
-    item10: "Lorem ipsum dolor sit amet",
-    item11: "Consectetur adipiscing elit",
-    item12: "Sed do eiusmod tempor",
-    item13: "Sed do eiusmod tempor",
-    item14: "Incididunt ut labore et dolore magna aliqua",
-    item15: "Ut enim ad minim veniam",
-    };
-
-    const pageNumbers = [];
-    for (let i = 1; i <= Math.ceil(Object.keys(data).length / itemsPerPage); i++) {
-        pageNumbers.push(i);
-    }
-
-    const handleClick = e => {
-        setCurrentPage(Number(e.target.id));
-    };
-
-    const renderPageNumbers = pageNumbers.map(number => {
-        return (
-        <li key={number} id={number} onClick={handleClick} className="border border-purple-600 w-8 text-center rounded-md cursor-pointer">
-            {number}
-        </li>
-        );
-    });
-
-    const indexOfLastItem = currentPage * itemsPerPage;
-    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    const currentItems = Object.entries(data).slice(indexOfFirstItem, indexOfLastItem);
-
-    const renderTableData = currentItems.map(([key, value]) => {
-        return (
-        <tr key={key}>
-            <td>{key}</td>
-            <td>{value}</td>
-        </tr>
-        );
-    });
+    isLoading && <div>Loading...</div>;
+  
+    error && <div>Error from ferthing: {error.message}</div>;
+  
+    (!data || !data?.length) && <div>No data found</div>;
+    
+    function handlePageClick({ selected: selectedPage }) {
+        setCurrentPage(selectedPage);
+      }
+    
   return (
     <div>
-         <h1 className="text-3xl p-8">Table with Pagination</h1>
-      <table className="table-fixed w-full text-left m-3">
-        <thead className="bg-amber-400">
-          <tr>
-            <th>Key</th>
-            <th>Value</th>
-          </tr>
-        </thead>
-        <tbody>{renderTableData}</tbody>
-      </table>
-        <div class="flex items-center justify-center mx-auto">
-            <ul id="page-numbers" className="flex items-center justify-center space-x-5">{renderPageNumbers}</ul>
+        <div className='flex items-center justify-between'>
+            <h1 className='text-3xl font-bold p-3'>Total Companys : {data.length}</h1>
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Create New</button>
         </div>
-      
+        <table className="table-fixed w-full text-left m-3">
+            <thead className="bg-amber-400">
+            <tr>
+                <th>Company Name</th>
+                <th>Logo</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+                {currentPageData && currentPageData.map(({id, name, link})=>(
+                    <tr key={id} className={`${id % 2 === 0 ? 'bg-gray-800' : 'bg-gray-600'} transform duration-200 hover:scale-[0.99] hover:bg-blue-900 hover:bg-opacity-10`}>
+                        <td>{name}</td>
+                        <td><img className='h-10' src={link} alt="" loading="lazy"/></td>
+                        <td className="px-4 py-2">
+                                <div className="flex space-x-1">
+                                <button className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">
+                                    Edit
+                                </button>
+                                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                                    Delete
+                                </button>
+                                </div>
+                            </td>
+                    </tr>
+                ))
+
+                }
+            </tbody>
+        </table>
+        <div>
+            <ReactPaginate
+                pageCount={pageCount}
+                onPageChange={handlePageClick}
+                containerClassName={'flex items-center justify-center space-x-4 mx-auto'}
+                activeClassName={'border w-6 h-6 text-center rounded-full'}
+            />
+        </div>
     </div>
   )
 }
