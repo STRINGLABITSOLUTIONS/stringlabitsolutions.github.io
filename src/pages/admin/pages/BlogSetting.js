@@ -4,6 +4,7 @@ import ModalBlog from '../component/ModalBlog';
 
 export default function BlogSetting() {
     const [showModal, setShoModal] = useState(false);
+    const [mData, setmData] = useState('');
 
     const {isLoading, data, error } = useFetch(`data/blogs.json`);
 
@@ -12,6 +13,14 @@ export default function BlogSetting() {
     error && <div>Error: {error.message}</div>;
   
     (!data || !data?.length) && <div>No data found</div>;
+
+    function HandleEditButtonClick(eData){
+        setmData(eData);
+        setShoModal(true);
+    }
+    function HandleViewButtonClick(index){
+        console.log(index);
+    }
   return (
     <div>
         <div className='flex items-center justify-between'>
@@ -38,11 +47,13 @@ export default function BlogSetting() {
                             <td className="px-4 py-2">{row.date}</td>
                             <td className="px-4 py-2">
                                 <div className="flex space-x-1">
-                                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                <button
+                                    onClick={()=>HandleViewButtonClick(row.title)}
+                                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                                     View
                                 </button>
                                 <button
-                                    onClick={()=> setShoModal(true)}
+                                    onClick={()=>HandleEditButtonClick(row)}
                                     className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">
                                     Edit
                                 </button>
@@ -56,7 +67,7 @@ export default function BlogSetting() {
                 </tbody>
             </table>
         </div>
-        <ModalBlog onClose={()=>setShoModal(false)} visible={showModal}/>
+        <ModalBlog mData={mData} onClose={()=>setShoModal(false)} visible={showModal}/>
     </div>
   )
 }
